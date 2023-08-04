@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="44c182bb-6374-4bbf-90c5-a90a8a49456b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://private.invoice4u.co.il/Services/LoginService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LoginService.disco" MetadataType="Disco" ID="bc30b2a6-df9c-4c93-ac4d-b60a00d11e92" SourceId="1" SourceUrl="http://private.invoice4u.co.il/Services/LoginService.svc?disco" />
+    <MetadataFile FileName="LoginService.wsdl" MetadataType="Wsdl" ID="17376962-fad4-4fa0-b717-2f39bdb03a4d" SourceId="1" SourceUrl="http://private.invoice4u.co.il/Services/LoginService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="LoginService1.wsdl" MetadataType="Wsdl" ID="36ec9020-b40a-485e-a888-db04a7d93a42" SourceId="1" SourceUrl="http://private.invoice4u.co.il/Services/LoginService.svc?wsdl" />
+    <MetadataFile FileName="LoginService.xsd" MetadataType="Schema" ID="8eaf6074-a7ce-48bb-a27b-d7f05fb9c5af" SourceId="1" SourceUrl="http://private.invoice4u.co.il/Services/LoginService.svc?xsd=xsd2" />
+    <MetadataFile FileName="LoginService3.xsd" MetadataType="Schema" ID="37b43a46-e289-4b13-b867-6798f40b019b" SourceId="1" SourceUrl="http://private.invoice4u.co.il/Services/LoginService.svc?xsd=xsd3" />
+    <MetadataFile FileName="LoginService1.xsd" MetadataType="Schema" ID="b313cabd-4256-4296-9704-df3fc3e94d8d" SourceId="1" SourceUrl="http://private.invoice4u.co.il/Services/LoginService.svc?xsd=xsd0" />
+    <MetadataFile FileName="LoginService2.xsd" MetadataType="Schema" ID="90552a95-4958-4f22-8939-7a0d163ee8cb" SourceId="1" SourceUrl="http://private.invoice4u.co.il/Services/LoginService.svc?xsd=xsd1" />
+    <MetadataFile FileName="LoginService4.xsd" MetadataType="Schema" ID="17f81e80-318b-42dc-bfa0-e5e55bffa7cf" SourceId="1" SourceUrl="http://private.invoice4u.co.il/Services/LoginService.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

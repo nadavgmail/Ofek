@@ -1,0 +1,1761 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/Billing/w_invoicereceipt" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/Billing/w_invoicereceipt" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/Billing/w_invoicereceipt">
+      <s:element name="SEND">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceReceiptNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MailTo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SENDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SENDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CREATE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceSubject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceDiscount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceDiscountRate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemDescription" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemQuantity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemPrice" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceTaxRate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceComments" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyInfo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MailTo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CREATEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CREATEResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CREATE_CONVERT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CurrencySource" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CurrencyTarget" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceSubject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceDiscount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceDiscountRate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemDescription" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemQuantity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemPrice" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceTaxRate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceComments" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyInfo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MailTo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CREATE_CONVERTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CREATE_CONVERTResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CREATE101">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CurrencySource" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CurrencyTarget" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceSubject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceDiscount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceDiscountRate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemDescription" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemQuantity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemPrice" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceTaxRate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceComments" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyInfo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MailTo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ItemPriceIsWithTax" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CREATE101Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CREATE101Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CREATE102">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CurrencyTarget" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceSubject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceDiscount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceDiscountRate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemDescription" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemQuantity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemPrice" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceTaxRate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceComments" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyInfo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MailTo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IsItemPriceWithTax" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CREATE102Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CREATE102Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateWithPaymentMethods">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CurrencyTarget" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceSubject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceDiscount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceDiscountRate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemDescription" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemQuantity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemPrice" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceTaxRate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceComments" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyInfo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MailTo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IsItemPriceWithTax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cash" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CheckDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CheckNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CheckAccount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CheckBranch" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CheckBank" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CheckAmount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcExpiration" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcVerification" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcAmount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransBank" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransBranch" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransAccount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransAmount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateWithPaymentMethodsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateWithPaymentMethodsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateWithPaymentMethods2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CurrencyTarget" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceSubject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceDiscount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceDiscountRate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemDescription" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemQuantity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemPrice" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceTaxRate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceComments" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyInfo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MailTo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IsItemPriceWithTax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cash" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CheckDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CheckNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CheckAccount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CheckBranch" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CheckBank" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CheckAmount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcPaymentNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcExpiration" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcVerification" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcAmount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransBank" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransBranch" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransAccount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransAmount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateWithPaymentMethods2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateWithPaymentMethods2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateWithPaymentMethods3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CurrencyTarget" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceSubject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceDiscount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceDiscountRate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemDescription" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemQuantity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemPrice" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceTaxRate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceComments" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyInfo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MailTo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IsItemPriceWithTax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cash" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CheckDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CheckNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CheckAccount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CheckBranch" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CheckBank" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CheckAmount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcPaymentNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcExpiration" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcVerification" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcAmount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransBank" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransBranch" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransAccount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransAmount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UniqueIdentifier" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateWithPaymentMethods3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateWithPaymentMethods3Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreatePayPal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CurrencyTarget" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceSubject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemDescription" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemQuantity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemPrice" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceTaxRate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceComments" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyInfo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MailTo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IsItemPriceWithTax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcExpiration" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcVerification" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcAmount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CcDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PayPalTransID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreatePayPalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreatePayPalResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateWithClearing">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:ArrayOfPaymentRequest" />
+            <s:element minOccurs="1" maxOccurs="1" name="toCharge" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPaymentRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PaymentRequest" nillable="true" type="tns:PaymentRequest" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PaymentRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencyTarget" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InvoiceSubject" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InvoiceDiscount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InvoiceDiscountRate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemQuantity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InvoiceItemPrice" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InvoiceTaxRate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InvoiceComments" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyInfo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MailTo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IsItemPriceWithTax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cash" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckAccount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckBranch" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckBank" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckAmount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CcNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CcExpiration" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CcType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CcVerification" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CcTicket" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CcAmount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CcPaymentNum" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CcDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CVV" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CCcurrency" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransBank" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransBranch" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransAccount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransAmount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserHTML" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocNum" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiscountAfterTax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UniqueIdentifier" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Deduction" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IsForceInvoiceClose" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayPalTransactionID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InvoiceID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateWithClearingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateWithClearingResult" type="tns:ArrayOfRequestResults" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRequestResults">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RequestResults" nillable="true" type="tns:RequestResults" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RequestResults">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="docUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InvoiceResponseMessage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="InvoiceResponseCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClearingResponseMessage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ClearingResponseCode" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DocNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateWithPaymentPelecard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:PaymentRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateWithPaymentPelecardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateWithPaymentPelecardResult" type="tns:RequestResults" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateInvoiceReceipt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:PaymentRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateInvoiceReceiptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateInvoiceReceiptResult" type="tns:RequestResults" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DocumentExists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UniqueIdentifier" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DocumentExistsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentExistsResult" type="tns:RequestResults" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsAlive">
+        <s:complexType />
+      </s:element>
+      <s:element name="IsAliveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsAliveResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RequestResults" nillable="true" type="tns:RequestResults" />
+      <s:element name="boolean" type="s:boolean" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SENDSoapIn">
+    <wsdl:part name="parameters" element="tns:SEND" />
+  </wsdl:message>
+  <wsdl:message name="SENDSoapOut">
+    <wsdl:part name="parameters" element="tns:SENDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CREATESoapIn">
+    <wsdl:part name="parameters" element="tns:CREATE" />
+  </wsdl:message>
+  <wsdl:message name="CREATESoapOut">
+    <wsdl:part name="parameters" element="tns:CREATEResponse" />
+  </wsdl:message>
+  <wsdl:message name="CREATE_CONVERTSoapIn">
+    <wsdl:part name="parameters" element="tns:CREATE_CONVERT" />
+  </wsdl:message>
+  <wsdl:message name="CREATE_CONVERTSoapOut">
+    <wsdl:part name="parameters" element="tns:CREATE_CONVERTResponse" />
+  </wsdl:message>
+  <wsdl:message name="CREATE101SoapIn">
+    <wsdl:part name="parameters" element="tns:CREATE101" />
+  </wsdl:message>
+  <wsdl:message name="CREATE101SoapOut">
+    <wsdl:part name="parameters" element="tns:CREATE101Response" />
+  </wsdl:message>
+  <wsdl:message name="CREATE102SoapIn">
+    <wsdl:part name="parameters" element="tns:CREATE102" />
+  </wsdl:message>
+  <wsdl:message name="CREATE102SoapOut">
+    <wsdl:part name="parameters" element="tns:CREATE102Response" />
+  </wsdl:message>
+  <wsdl:message name="CreateWithPaymentMethodsSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateWithPaymentMethods" />
+  </wsdl:message>
+  <wsdl:message name="CreateWithPaymentMethodsSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateWithPaymentMethodsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateWithPaymentMethods2SoapIn">
+    <wsdl:part name="parameters" element="tns:CreateWithPaymentMethods2" />
+  </wsdl:message>
+  <wsdl:message name="CreateWithPaymentMethods2SoapOut">
+    <wsdl:part name="parameters" element="tns:CreateWithPaymentMethods2Response" />
+  </wsdl:message>
+  <wsdl:message name="CreateWithPaymentMethods3SoapIn">
+    <wsdl:part name="parameters" element="tns:CreateWithPaymentMethods3" />
+  </wsdl:message>
+  <wsdl:message name="CreateWithPaymentMethods3SoapOut">
+    <wsdl:part name="parameters" element="tns:CreateWithPaymentMethods3Response" />
+  </wsdl:message>
+  <wsdl:message name="CreatePayPalSoapIn">
+    <wsdl:part name="parameters" element="tns:CreatePayPal" />
+  </wsdl:message>
+  <wsdl:message name="CreatePayPalSoapOut">
+    <wsdl:part name="parameters" element="tns:CreatePayPalResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateWithClearingSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateWithClearing" />
+  </wsdl:message>
+  <wsdl:message name="CreateWithClearingSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateWithClearingResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateWithPaymentPelecardSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateWithPaymentPelecard" />
+  </wsdl:message>
+  <wsdl:message name="CreateWithPaymentPelecardSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateWithPaymentPelecardResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateInvoiceReceiptSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateInvoiceReceipt" />
+  </wsdl:message>
+  <wsdl:message name="CreateInvoiceReceiptSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateInvoiceReceiptResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentExistsSoapIn">
+    <wsdl:part name="parameters" element="tns:DocumentExists" />
+  </wsdl:message>
+  <wsdl:message name="DocumentExistsSoapOut">
+    <wsdl:part name="parameters" element="tns:DocumentExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsAliveSoapIn">
+    <wsdl:part name="parameters" element="tns:IsAlive" />
+  </wsdl:message>
+  <wsdl:message name="IsAliveSoapOut">
+    <wsdl:part name="parameters" element="tns:IsAliveResponse" />
+  </wsdl:message>
+  <wsdl:message name="SENDHttpGetIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="InvoiceReceiptNumber" type="s:string" />
+    <wsdl:part name="MailTo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SENDHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="CREATEHttpGetIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="InvoiceDate" type="s:string" />
+    <wsdl:part name="InvoiceSubject" type="s:string" />
+    <wsdl:part name="InvoiceDiscount" type="s:string" />
+    <wsdl:part name="InvoiceDiscountRate" type="s:string" />
+    <wsdl:part name="InvoiceItemCode" type="s:string" />
+    <wsdl:part name="InvoiceItemDescription" type="s:string" />
+    <wsdl:part name="InvoiceItemQuantity" type="s:string" />
+    <wsdl:part name="InvoiceItemPrice" type="s:string" />
+    <wsdl:part name="InvoiceTaxRate" type="s:string" />
+    <wsdl:part name="InvoiceComments" type="s:string" />
+    <wsdl:part name="CompanyCode" type="s:string" />
+    <wsdl:part name="CompanyInfo" type="s:string" />
+    <wsdl:part name="MailTo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CREATEHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="CREATE_CONVERTHttpGetIn">
+    <wsdl:part name="CurrencySource" type="s:string" />
+    <wsdl:part name="CurrencyTarget" type="s:string" />
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="InvoiceDate" type="s:string" />
+    <wsdl:part name="InvoiceSubject" type="s:string" />
+    <wsdl:part name="InvoiceDiscount" type="s:string" />
+    <wsdl:part name="InvoiceDiscountRate" type="s:string" />
+    <wsdl:part name="InvoiceItemCode" type="s:string" />
+    <wsdl:part name="InvoiceItemDescription" type="s:string" />
+    <wsdl:part name="InvoiceItemQuantity" type="s:string" />
+    <wsdl:part name="InvoiceItemPrice" type="s:string" />
+    <wsdl:part name="InvoiceTaxRate" type="s:string" />
+    <wsdl:part name="InvoiceComments" type="s:string" />
+    <wsdl:part name="CompanyCode" type="s:string" />
+    <wsdl:part name="CompanyInfo" type="s:string" />
+    <wsdl:part name="MailTo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CREATE_CONVERTHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="CREATE101HttpGetIn">
+    <wsdl:part name="CurrencySource" type="s:string" />
+    <wsdl:part name="CurrencyTarget" type="s:string" />
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="InvoiceSubject" type="s:string" />
+    <wsdl:part name="InvoiceDiscount" type="s:string" />
+    <wsdl:part name="InvoiceDiscountRate" type="s:string" />
+    <wsdl:part name="InvoiceItemCode" type="s:string" />
+    <wsdl:part name="InvoiceItemDescription" type="s:string" />
+    <wsdl:part name="InvoiceItemQuantity" type="s:string" />
+    <wsdl:part name="InvoiceItemPrice" type="s:string" />
+    <wsdl:part name="InvoiceTaxRate" type="s:string" />
+    <wsdl:part name="InvoiceComments" type="s:string" />
+    <wsdl:part name="CompanyCode" type="s:string" />
+    <wsdl:part name="CompanyInfo" type="s:string" />
+    <wsdl:part name="MailTo" type="s:string" />
+    <wsdl:part name="ItemPriceIsWithTax" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CREATE101HttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="CREATE102HttpGetIn">
+    <wsdl:part name="CurrencyTarget" type="s:string" />
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="InvoiceSubject" type="s:string" />
+    <wsdl:part name="InvoiceDiscount" type="s:string" />
+    <wsdl:part name="InvoiceDiscountRate" type="s:string" />
+    <wsdl:part name="InvoiceItemCode" type="s:string" />
+    <wsdl:part name="InvoiceItemDescription" type="s:string" />
+    <wsdl:part name="InvoiceItemQuantity" type="s:string" />
+    <wsdl:part name="InvoiceItemPrice" type="s:string" />
+    <wsdl:part name="InvoiceTaxRate" type="s:string" />
+    <wsdl:part name="InvoiceComments" type="s:string" />
+    <wsdl:part name="CompanyCode" type="s:string" />
+    <wsdl:part name="CompanyInfo" type="s:string" />
+    <wsdl:part name="MailTo" type="s:string" />
+    <wsdl:part name="IsItemPriceWithTax" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CREATE102HttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="CreateWithPaymentMethodsHttpGetIn">
+    <wsdl:part name="CurrencyTarget" type="s:string" />
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="InvoiceSubject" type="s:string" />
+    <wsdl:part name="InvoiceDiscount" type="s:string" />
+    <wsdl:part name="InvoiceDiscountRate" type="s:string" />
+    <wsdl:part name="InvoiceItemCode" type="s:string" />
+    <wsdl:part name="InvoiceItemDescription" type="s:string" />
+    <wsdl:part name="InvoiceItemQuantity" type="s:string" />
+    <wsdl:part name="InvoiceItemPrice" type="s:string" />
+    <wsdl:part name="InvoiceTaxRate" type="s:string" />
+    <wsdl:part name="InvoiceComments" type="s:string" />
+    <wsdl:part name="CompanyCode" type="s:string" />
+    <wsdl:part name="CompanyInfo" type="s:string" />
+    <wsdl:part name="MailTo" type="s:string" />
+    <wsdl:part name="IsItemPriceWithTax" type="s:string" />
+    <wsdl:part name="Cash" type="s:string" />
+    <wsdl:part name="CheckDate" type="s:string" />
+    <wsdl:part name="CheckNumber" type="s:string" />
+    <wsdl:part name="CheckAccount" type="s:string" />
+    <wsdl:part name="CheckBranch" type="s:string" />
+    <wsdl:part name="CheckBank" type="s:string" />
+    <wsdl:part name="CheckAmount" type="s:string" />
+    <wsdl:part name="CcNumber" type="s:string" />
+    <wsdl:part name="CcExpiration" type="s:string" />
+    <wsdl:part name="CcType" type="s:string" />
+    <wsdl:part name="CcVerification" type="s:string" />
+    <wsdl:part name="CcTicket" type="s:string" />
+    <wsdl:part name="CcAmount" type="s:string" />
+    <wsdl:part name="CcDate" type="s:string" />
+    <wsdl:part name="TransDate" type="s:string" />
+    <wsdl:part name="TransBank" type="s:string" />
+    <wsdl:part name="TransBranch" type="s:string" />
+    <wsdl:part name="TransAccount" type="s:string" />
+    <wsdl:part name="TransAmount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateWithPaymentMethodsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="CreateWithPaymentMethods2HttpGetIn">
+    <wsdl:part name="CurrencyTarget" type="s:string" />
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="InvoiceSubject" type="s:string" />
+    <wsdl:part name="InvoiceDiscount" type="s:string" />
+    <wsdl:part name="InvoiceDiscountRate" type="s:string" />
+    <wsdl:part name="InvoiceItemCode" type="s:string" />
+    <wsdl:part name="InvoiceItemDescription" type="s:string" />
+    <wsdl:part name="InvoiceItemQuantity" type="s:string" />
+    <wsdl:part name="InvoiceItemPrice" type="s:string" />
+    <wsdl:part name="InvoiceTaxRate" type="s:string" />
+    <wsdl:part name="InvoiceComments" type="s:string" />
+    <wsdl:part name="CompanyCode" type="s:string" />
+    <wsdl:part name="CompanyInfo" type="s:string" />
+    <wsdl:part name="MailTo" type="s:string" />
+    <wsdl:part name="IsItemPriceWithTax" type="s:string" />
+    <wsdl:part name="Cash" type="s:string" />
+    <wsdl:part name="CheckDate" type="s:string" />
+    <wsdl:part name="CheckNumber" type="s:string" />
+    <wsdl:part name="CheckAccount" type="s:string" />
+    <wsdl:part name="CheckBranch" type="s:string" />
+    <wsdl:part name="CheckBank" type="s:string" />
+    <wsdl:part name="CheckAmount" type="s:string" />
+    <wsdl:part name="CcNumber" type="s:string" />
+    <wsdl:part name="CcPaymentNum" type="s:string" />
+    <wsdl:part name="CcExpiration" type="s:string" />
+    <wsdl:part name="CcType" type="s:string" />
+    <wsdl:part name="CcVerification" type="s:string" />
+    <wsdl:part name="CcTicket" type="s:string" />
+    <wsdl:part name="CcAmount" type="s:string" />
+    <wsdl:part name="CcDate" type="s:string" />
+    <wsdl:part name="TransDate" type="s:string" />
+    <wsdl:part name="TransBank" type="s:string" />
+    <wsdl:part name="TransBranch" type="s:string" />
+    <wsdl:part name="TransAccount" type="s:string" />
+    <wsdl:part name="TransAmount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateWithPaymentMethods2HttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="CreateWithPaymentMethods3HttpGetIn">
+    <wsdl:part name="CurrencyTarget" type="s:string" />
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="InvoiceSubject" type="s:string" />
+    <wsdl:part name="InvoiceDiscount" type="s:string" />
+    <wsdl:part name="InvoiceDiscountRate" type="s:string" />
+    <wsdl:part name="InvoiceItemCode" type="s:string" />
+    <wsdl:part name="InvoiceItemDescription" type="s:string" />
+    <wsdl:part name="InvoiceItemQuantity" type="s:string" />
+    <wsdl:part name="InvoiceItemPrice" type="s:string" />
+    <wsdl:part name="InvoiceTaxRate" type="s:string" />
+    <wsdl:part name="InvoiceComments" type="s:string" />
+    <wsdl:part name="CompanyCode" type="s:string" />
+    <wsdl:part name="CompanyInfo" type="s:string" />
+    <wsdl:part name="MailTo" type="s:string" />
+    <wsdl:part name="IsItemPriceWithTax" type="s:string" />
+    <wsdl:part name="Cash" type="s:string" />
+    <wsdl:part name="CheckDate" type="s:string" />
+    <wsdl:part name="CheckNumber" type="s:string" />
+    <wsdl:part name="CheckAccount" type="s:string" />
+    <wsdl:part name="CheckBranch" type="s:string" />
+    <wsdl:part name="CheckBank" type="s:string" />
+    <wsdl:part name="CheckAmount" type="s:string" />
+    <wsdl:part name="CcNumber" type="s:string" />
+    <wsdl:part name="CcPaymentNum" type="s:string" />
+    <wsdl:part name="CcExpiration" type="s:string" />
+    <wsdl:part name="CcType" type="s:string" />
+    <wsdl:part name="CcVerification" type="s:string" />
+    <wsdl:part name="CcTicket" type="s:string" />
+    <wsdl:part name="CcAmount" type="s:string" />
+    <wsdl:part name="CcDate" type="s:string" />
+    <wsdl:part name="TransDate" type="s:string" />
+    <wsdl:part name="TransBank" type="s:string" />
+    <wsdl:part name="TransBranch" type="s:string" />
+    <wsdl:part name="TransAccount" type="s:string" />
+    <wsdl:part name="TransAmount" type="s:string" />
+    <wsdl:part name="UniqueIdentifier" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateWithPaymentMethods3HttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="CreatePayPalHttpGetIn">
+    <wsdl:part name="CurrencyTarget" type="s:string" />
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="InvoiceSubject" type="s:string" />
+    <wsdl:part name="InvoiceItemCode" type="s:string" />
+    <wsdl:part name="InvoiceItemDescription" type="s:string" />
+    <wsdl:part name="InvoiceItemQuantity" type="s:string" />
+    <wsdl:part name="InvoiceItemPrice" type="s:string" />
+    <wsdl:part name="InvoiceTaxRate" type="s:string" />
+    <wsdl:part name="InvoiceComments" type="s:string" />
+    <wsdl:part name="CompanyInfo" type="s:string" />
+    <wsdl:part name="MailTo" type="s:string" />
+    <wsdl:part name="IsItemPriceWithTax" type="s:string" />
+    <wsdl:part name="CcNumber" type="s:string" />
+    <wsdl:part name="CcExpiration" type="s:string" />
+    <wsdl:part name="CcType" type="s:string" />
+    <wsdl:part name="CcVerification" type="s:string" />
+    <wsdl:part name="CcTicket" type="s:string" />
+    <wsdl:part name="CcAmount" type="s:string" />
+    <wsdl:part name="CcDate" type="s:string" />
+    <wsdl:part name="PayPalTransID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreatePayPalHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="DocumentExistsHttpGetIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="UniqueIdentifier" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DocumentExistsHttpGetOut">
+    <wsdl:part name="Body" element="tns:RequestResults" />
+  </wsdl:message>
+  <wsdl:message name="IsAliveHttpGetIn" />
+  <wsdl:message name="IsAliveHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="SENDHttpPostIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="InvoiceReceiptNumber" type="s:string" />
+    <wsdl:part name="MailTo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SENDHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="CREATEHttpPostIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="InvoiceDate" type="s:string" />
+    <wsdl:part name="InvoiceSubject" type="s:string" />
+    <wsdl:part name="InvoiceDiscount" type="s:string" />
+    <wsdl:part name="InvoiceDiscountRate" type="s:string" />
+    <wsdl:part name="InvoiceItemCode" type="s:string" />
+    <wsdl:part name="InvoiceItemDescription" type="s:string" />
+    <wsdl:part name="InvoiceItemQuantity" type="s:string" />
+    <wsdl:part name="InvoiceItemPrice" type="s:string" />
+    <wsdl:part name="InvoiceTaxRate" type="s:string" />
+    <wsdl:part name="InvoiceComments" type="s:string" />
+    <wsdl:part name="CompanyCode" type="s:string" />
+    <wsdl:part name="CompanyInfo" type="s:string" />
+    <wsdl:part name="MailTo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CREATEHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="CREATE_CONVERTHttpPostIn">
+    <wsdl:part name="CurrencySource" type="s:string" />
+    <wsdl:part name="CurrencyTarget" type="s:string" />
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="InvoiceDate" type="s:string" />
+    <wsdl:part name="InvoiceSubject" type="s:string" />
+    <wsdl:part name="InvoiceDiscount" type="s:string" />
+    <wsdl:part name="InvoiceDiscountRate" type="s:string" />
+    <wsdl:part name="InvoiceItemCode" type="s:string" />
+    <wsdl:part name="InvoiceItemDescription" type="s:string" />
+    <wsdl:part name="InvoiceItemQuantity" type="s:string" />
+    <wsdl:part name="InvoiceItemPrice" type="s:string" />
+    <wsdl:part name="InvoiceTaxRate" type="s:string" />
+    <wsdl:part name="InvoiceComments" type="s:string" />
+    <wsdl:part name="CompanyCode" type="s:string" />
+    <wsdl:part name="CompanyInfo" type="s:string" />
+    <wsdl:part name="MailTo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CREATE_CONVERTHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="CREATE101HttpPostIn">
+    <wsdl:part name="CurrencySource" type="s:string" />
+    <wsdl:part name="CurrencyTarget" type="s:string" />
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="InvoiceSubject" type="s:string" />
+    <wsdl:part name="InvoiceDiscount" type="s:string" />
+    <wsdl:part name="InvoiceDiscountRate" type="s:string" />
+    <wsdl:part name="InvoiceItemCode" type="s:string" />
+    <wsdl:part name="InvoiceItemDescription" type="s:string" />
+    <wsdl:part name="InvoiceItemQuantity" type="s:string" />
+    <wsdl:part name="InvoiceItemPrice" type="s:string" />
+    <wsdl:part name="InvoiceTaxRate" type="s:string" />
+    <wsdl:part name="InvoiceComments" type="s:string" />
+    <wsdl:part name="CompanyCode" type="s:string" />
+    <wsdl:part name="CompanyInfo" type="s:string" />
+    <wsdl:part name="MailTo" type="s:string" />
+    <wsdl:part name="ItemPriceIsWithTax" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CREATE101HttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="CREATE102HttpPostIn">
+    <wsdl:part name="CurrencyTarget" type="s:string" />
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="InvoiceSubject" type="s:string" />
+    <wsdl:part name="InvoiceDiscount" type="s:string" />
+    <wsdl:part name="InvoiceDiscountRate" type="s:string" />
+    <wsdl:part name="InvoiceItemCode" type="s:string" />
+    <wsdl:part name="InvoiceItemDescription" type="s:string" />
+    <wsdl:part name="InvoiceItemQuantity" type="s:string" />
+    <wsdl:part name="InvoiceItemPrice" type="s:string" />
+    <wsdl:part name="InvoiceTaxRate" type="s:string" />
+    <wsdl:part name="InvoiceComments" type="s:string" />
+    <wsdl:part name="CompanyCode" type="s:string" />
+    <wsdl:part name="CompanyInfo" type="s:string" />
+    <wsdl:part name="MailTo" type="s:string" />
+    <wsdl:part name="IsItemPriceWithTax" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CREATE102HttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="CreateWithPaymentMethodsHttpPostIn">
+    <wsdl:part name="CurrencyTarget" type="s:string" />
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="InvoiceSubject" type="s:string" />
+    <wsdl:part name="InvoiceDiscount" type="s:string" />
+    <wsdl:part name="InvoiceDiscountRate" type="s:string" />
+    <wsdl:part name="InvoiceItemCode" type="s:string" />
+    <wsdl:part name="InvoiceItemDescription" type="s:string" />
+    <wsdl:part name="InvoiceItemQuantity" type="s:string" />
+    <wsdl:part name="InvoiceItemPrice" type="s:string" />
+    <wsdl:part name="InvoiceTaxRate" type="s:string" />
+    <wsdl:part name="InvoiceComments" type="s:string" />
+    <wsdl:part name="CompanyCode" type="s:string" />
+    <wsdl:part name="CompanyInfo" type="s:string" />
+    <wsdl:part name="MailTo" type="s:string" />
+    <wsdl:part name="IsItemPriceWithTax" type="s:string" />
+    <wsdl:part name="Cash" type="s:string" />
+    <wsdl:part name="CheckDate" type="s:string" />
+    <wsdl:part name="CheckNumber" type="s:string" />
+    <wsdl:part name="CheckAccount" type="s:string" />
+    <wsdl:part name="CheckBranch" type="s:string" />
+    <wsdl:part name="CheckBank" type="s:string" />
+    <wsdl:part name="CheckAmount" type="s:string" />
+    <wsdl:part name="CcNumber" type="s:string" />
+    <wsdl:part name="CcExpiration" type="s:string" />
+    <wsdl:part name="CcType" type="s:string" />
+    <wsdl:part name="CcVerification" type="s:string" />
+    <wsdl:part name="CcTicket" type="s:string" />
+    <wsdl:part name="CcAmount" type="s:string" />
+    <wsdl:part name="CcDate" type="s:string" />
+    <wsdl:part name="TransDate" type="s:string" />
+    <wsdl:part name="TransBank" type="s:string" />
+    <wsdl:part name="TransBranch" type="s:string" />
+    <wsdl:part name="TransAccount" type="s:string" />
+    <wsdl:part name="TransAmount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateWithPaymentMethodsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="CreateWithPaymentMethods2HttpPostIn">
+    <wsdl:part name="CurrencyTarget" type="s:string" />
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="InvoiceSubject" type="s:string" />
+    <wsdl:part name="InvoiceDiscount" type="s:string" />
+    <wsdl:part name="InvoiceDiscountRate" type="s:string" />
+    <wsdl:part name="InvoiceItemCode" type="s:string" />
+    <wsdl:part name="InvoiceItemDescription" type="s:string" />
+    <wsdl:part name="InvoiceItemQuantity" type="s:string" />
+    <wsdl:part name="InvoiceItemPrice" type="s:string" />
+    <wsdl:part name="InvoiceTaxRate" type="s:string" />
+    <wsdl:part name="InvoiceComments" type="s:string" />
+    <wsdl:part name="CompanyCode" type="s:string" />
+    <wsdl:part name="CompanyInfo" type="s:string" />
+    <wsdl:part name="MailTo" type="s:string" />
+    <wsdl:part name="IsItemPriceWithTax" type="s:string" />
+    <wsdl:part name="Cash" type="s:string" />
+    <wsdl:part name="CheckDate" type="s:string" />
+    <wsdl:part name="CheckNumber" type="s:string" />
+    <wsdl:part name="CheckAccount" type="s:string" />
+    <wsdl:part name="CheckBranch" type="s:string" />
+    <wsdl:part name="CheckBank" type="s:string" />
+    <wsdl:part name="CheckAmount" type="s:string" />
+    <wsdl:part name="CcNumber" type="s:string" />
+    <wsdl:part name="CcPaymentNum" type="s:string" />
+    <wsdl:part name="CcExpiration" type="s:string" />
+    <wsdl:part name="CcType" type="s:string" />
+    <wsdl:part name="CcVerification" type="s:string" />
+    <wsdl:part name="CcTicket" type="s:string" />
+    <wsdl:part name="CcAmount" type="s:string" />
+    <wsdl:part name="CcDate" type="s:string" />
+    <wsdl:part name="TransDate" type="s:string" />
+    <wsdl:part name="TransBank" type="s:string" />
+    <wsdl:part name="TransBranch" type="s:string" />
+    <wsdl:part name="TransAccount" type="s:string" />
+    <wsdl:part name="TransAmount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateWithPaymentMethods2HttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="CreateWithPaymentMethods3HttpPostIn">
+    <wsdl:part name="CurrencyTarget" type="s:string" />
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="InvoiceSubject" type="s:string" />
+    <wsdl:part name="InvoiceDiscount" type="s:string" />
+    <wsdl:part name="InvoiceDiscountRate" type="s:string" />
+    <wsdl:part name="InvoiceItemCode" type="s:string" />
+    <wsdl:part name="InvoiceItemDescription" type="s:string" />
+    <wsdl:part name="InvoiceItemQuantity" type="s:string" />
+    <wsdl:part name="InvoiceItemPrice" type="s:string" />
+    <wsdl:part name="InvoiceTaxRate" type="s:string" />
+    <wsdl:part name="InvoiceComments" type="s:string" />
+    <wsdl:part name="CompanyCode" type="s:string" />
+    <wsdl:part name="CompanyInfo" type="s:string" />
+    <wsdl:part name="MailTo" type="s:string" />
+    <wsdl:part name="IsItemPriceWithTax" type="s:string" />
+    <wsdl:part name="Cash" type="s:string" />
+    <wsdl:part name="CheckDate" type="s:string" />
+    <wsdl:part name="CheckNumber" type="s:string" />
+    <wsdl:part name="CheckAccount" type="s:string" />
+    <wsdl:part name="CheckBranch" type="s:string" />
+    <wsdl:part name="CheckBank" type="s:string" />
+    <wsdl:part name="CheckAmount" type="s:string" />
+    <wsdl:part name="CcNumber" type="s:string" />
+    <wsdl:part name="CcPaymentNum" type="s:string" />
+    <wsdl:part name="CcExpiration" type="s:string" />
+    <wsdl:part name="CcType" type="s:string" />
+    <wsdl:part name="CcVerification" type="s:string" />
+    <wsdl:part name="CcTicket" type="s:string" />
+    <wsdl:part name="CcAmount" type="s:string" />
+    <wsdl:part name="CcDate" type="s:string" />
+    <wsdl:part name="TransDate" type="s:string" />
+    <wsdl:part name="TransBank" type="s:string" />
+    <wsdl:part name="TransBranch" type="s:string" />
+    <wsdl:part name="TransAccount" type="s:string" />
+    <wsdl:part name="TransAmount" type="s:string" />
+    <wsdl:part name="UniqueIdentifier" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateWithPaymentMethods3HttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="CreatePayPalHttpPostIn">
+    <wsdl:part name="CurrencyTarget" type="s:string" />
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="InvoiceSubject" type="s:string" />
+    <wsdl:part name="InvoiceItemCode" type="s:string" />
+    <wsdl:part name="InvoiceItemDescription" type="s:string" />
+    <wsdl:part name="InvoiceItemQuantity" type="s:string" />
+    <wsdl:part name="InvoiceItemPrice" type="s:string" />
+    <wsdl:part name="InvoiceTaxRate" type="s:string" />
+    <wsdl:part name="InvoiceComments" type="s:string" />
+    <wsdl:part name="CompanyInfo" type="s:string" />
+    <wsdl:part name="MailTo" type="s:string" />
+    <wsdl:part name="IsItemPriceWithTax" type="s:string" />
+    <wsdl:part name="CcNumber" type="s:string" />
+    <wsdl:part name="CcExpiration" type="s:string" />
+    <wsdl:part name="CcType" type="s:string" />
+    <wsdl:part name="CcVerification" type="s:string" />
+    <wsdl:part name="CcTicket" type="s:string" />
+    <wsdl:part name="CcAmount" type="s:string" />
+    <wsdl:part name="CcDate" type="s:string" />
+    <wsdl:part name="PayPalTransID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreatePayPalHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="DocumentExistsHttpPostIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="UniqueIdentifier" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DocumentExistsHttpPostOut">
+    <wsdl:part name="Body" element="tns:RequestResults" />
+  </wsdl:message>
+  <wsdl:message name="IsAliveHttpPostIn" />
+  <wsdl:message name="IsAliveHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:portType name="w_invoicereceiptSoap">
+    <wsdl:operation name="SEND">
+      <wsdl:input message="tns:SENDSoapIn" />
+      <wsdl:output message="tns:SENDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CREATE">
+      <wsdl:input message="tns:CREATESoapIn" />
+      <wsdl:output message="tns:CREATESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CREATE_CONVERT">
+      <wsdl:input message="tns:CREATE_CONVERTSoapIn" />
+      <wsdl:output message="tns:CREATE_CONVERTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CREATE101">
+      <wsdl:input message="tns:CREATE101SoapIn" />
+      <wsdl:output message="tns:CREATE101SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CREATE102">
+      <wsdl:input message="tns:CREATE102SoapIn" />
+      <wsdl:output message="tns:CREATE102SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateWithPaymentMethods">
+      <wsdl:input message="tns:CreateWithPaymentMethodsSoapIn" />
+      <wsdl:output message="tns:CreateWithPaymentMethodsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateWithPaymentMethods2">
+      <wsdl:input message="tns:CreateWithPaymentMethods2SoapIn" />
+      <wsdl:output message="tns:CreateWithPaymentMethods2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateWithPaymentMethods3">
+      <wsdl:input message="tns:CreateWithPaymentMethods3SoapIn" />
+      <wsdl:output message="tns:CreateWithPaymentMethods3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePayPal">
+      <wsdl:input message="tns:CreatePayPalSoapIn" />
+      <wsdl:output message="tns:CreatePayPalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateWithClearing">
+      <wsdl:input message="tns:CreateWithClearingSoapIn" />
+      <wsdl:output message="tns:CreateWithClearingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateWithPaymentPelecard">
+      <wsdl:input message="tns:CreateWithPaymentPelecardSoapIn" />
+      <wsdl:output message="tns:CreateWithPaymentPelecardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateInvoiceReceipt">
+      <wsdl:input message="tns:CreateInvoiceReceiptSoapIn" />
+      <wsdl:output message="tns:CreateInvoiceReceiptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentExists">
+      <wsdl:input message="tns:DocumentExistsSoapIn" />
+      <wsdl:output message="tns:DocumentExistsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsAlive">
+      <wsdl:input message="tns:IsAliveSoapIn" />
+      <wsdl:output message="tns:IsAliveSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="w_invoicereceiptHttpGet">
+    <wsdl:operation name="SEND">
+      <wsdl:input message="tns:SENDHttpGetIn" />
+      <wsdl:output message="tns:SENDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CREATE">
+      <wsdl:input message="tns:CREATEHttpGetIn" />
+      <wsdl:output message="tns:CREATEHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CREATE_CONVERT">
+      <wsdl:input message="tns:CREATE_CONVERTHttpGetIn" />
+      <wsdl:output message="tns:CREATE_CONVERTHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CREATE101">
+      <wsdl:input message="tns:CREATE101HttpGetIn" />
+      <wsdl:output message="tns:CREATE101HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CREATE102">
+      <wsdl:input message="tns:CREATE102HttpGetIn" />
+      <wsdl:output message="tns:CREATE102HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateWithPaymentMethods">
+      <wsdl:input message="tns:CreateWithPaymentMethodsHttpGetIn" />
+      <wsdl:output message="tns:CreateWithPaymentMethodsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateWithPaymentMethods2">
+      <wsdl:input message="tns:CreateWithPaymentMethods2HttpGetIn" />
+      <wsdl:output message="tns:CreateWithPaymentMethods2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateWithPaymentMethods3">
+      <wsdl:input message="tns:CreateWithPaymentMethods3HttpGetIn" />
+      <wsdl:output message="tns:CreateWithPaymentMethods3HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePayPal">
+      <wsdl:input message="tns:CreatePayPalHttpGetIn" />
+      <wsdl:output message="tns:CreatePayPalHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentExists">
+      <wsdl:input message="tns:DocumentExistsHttpGetIn" />
+      <wsdl:output message="tns:DocumentExistsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsAlive">
+      <wsdl:input message="tns:IsAliveHttpGetIn" />
+      <wsdl:output message="tns:IsAliveHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="w_invoicereceiptHttpPost">
+    <wsdl:operation name="SEND">
+      <wsdl:input message="tns:SENDHttpPostIn" />
+      <wsdl:output message="tns:SENDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CREATE">
+      <wsdl:input message="tns:CREATEHttpPostIn" />
+      <wsdl:output message="tns:CREATEHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CREATE_CONVERT">
+      <wsdl:input message="tns:CREATE_CONVERTHttpPostIn" />
+      <wsdl:output message="tns:CREATE_CONVERTHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CREATE101">
+      <wsdl:input message="tns:CREATE101HttpPostIn" />
+      <wsdl:output message="tns:CREATE101HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CREATE102">
+      <wsdl:input message="tns:CREATE102HttpPostIn" />
+      <wsdl:output message="tns:CREATE102HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateWithPaymentMethods">
+      <wsdl:input message="tns:CreateWithPaymentMethodsHttpPostIn" />
+      <wsdl:output message="tns:CreateWithPaymentMethodsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateWithPaymentMethods2">
+      <wsdl:input message="tns:CreateWithPaymentMethods2HttpPostIn" />
+      <wsdl:output message="tns:CreateWithPaymentMethods2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateWithPaymentMethods3">
+      <wsdl:input message="tns:CreateWithPaymentMethods3HttpPostIn" />
+      <wsdl:output message="tns:CreateWithPaymentMethods3HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePayPal">
+      <wsdl:input message="tns:CreatePayPalHttpPostIn" />
+      <wsdl:output message="tns:CreatePayPalHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentExists">
+      <wsdl:input message="tns:DocumentExistsHttpPostIn" />
+      <wsdl:output message="tns:DocumentExistsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsAlive">
+      <wsdl:input message="tns:IsAliveHttpPostIn" />
+      <wsdl:output message="tns:IsAliveHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="w_invoicereceiptSoap" type="tns:w_invoicereceiptSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SEND">
+      <soap:operation soapAction="http://tempuri.org/Billing/w_invoicereceipt/SEND" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CREATE">
+      <soap:operation soapAction="http://tempuri.org/Billing/w_invoicereceipt/CREATE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CREATE_CONVERT">
+      <soap:operation soapAction="http://tempuri.org/Billing/w_invoicereceipt/CREATE_CONVERT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CREATE101">
+      <soap:operation soapAction="http://tempuri.org/Billing/w_invoicereceipt/CREATE101" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CREATE102">
+      <soap:operation soapAction="http://tempuri.org/Billing/w_invoicereceipt/CREATE102" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateWithPaymentMethods">
+      <soap:operation soapAction="http://tempuri.org/Billing/w_invoicereceipt/CreateWithPaymentMethods" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateWithPaymentMethods2">
+      <soap:operation soapAction="http://tempuri.org/Billing/w_invoicereceipt/CreateWithPaymentMethods2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateWithPaymentMethods3">
+      <soap:operation soapAction="http://tempuri.org/Billing/w_invoicereceipt/CreateWithPaymentMethods3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePayPal">
+      <soap:operation soapAction="http://tempuri.org/Billing/w_invoicereceipt/CreatePayPal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateWithClearing">
+      <soap:operation soapAction="http://tempuri.org/Billing/w_invoicereceipt/CreateWithClearing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateWithPaymentPelecard">
+      <soap:operation soapAction="http://tempuri.org/Billing/w_invoicereceipt/CreateWithPaymentPelecard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateInvoiceReceipt">
+      <soap:operation soapAction="http://tempuri.org/Billing/w_invoicereceipt/CreateInvoiceReceipt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentExists">
+      <soap:operation soapAction="http://tempuri.org/Billing/w_invoicereceipt/DocumentExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsAlive">
+      <soap:operation soapAction="http://tempuri.org/Billing/w_invoicereceipt/IsAlive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="w_invoicereceiptSoap12" type="tns:w_invoicereceiptSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SEND">
+      <soap12:operation soapAction="http://tempuri.org/Billing/w_invoicereceipt/SEND" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CREATE">
+      <soap12:operation soapAction="http://tempuri.org/Billing/w_invoicereceipt/CREATE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CREATE_CONVERT">
+      <soap12:operation soapAction="http://tempuri.org/Billing/w_invoicereceipt/CREATE_CONVERT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CREATE101">
+      <soap12:operation soapAction="http://tempuri.org/Billing/w_invoicereceipt/CREATE101" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CREATE102">
+      <soap12:operation soapAction="http://tempuri.org/Billing/w_invoicereceipt/CREATE102" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateWithPaymentMethods">
+      <soap12:operation soapAction="http://tempuri.org/Billing/w_invoicereceipt/CreateWithPaymentMethods" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateWithPaymentMethods2">
+      <soap12:operation soapAction="http://tempuri.org/Billing/w_invoicereceipt/CreateWithPaymentMethods2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateWithPaymentMethods3">
+      <soap12:operation soapAction="http://tempuri.org/Billing/w_invoicereceipt/CreateWithPaymentMethods3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePayPal">
+      <soap12:operation soapAction="http://tempuri.org/Billing/w_invoicereceipt/CreatePayPal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateWithClearing">
+      <soap12:operation soapAction="http://tempuri.org/Billing/w_invoicereceipt/CreateWithClearing" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateWithPaymentPelecard">
+      <soap12:operation soapAction="http://tempuri.org/Billing/w_invoicereceipt/CreateWithPaymentPelecard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateInvoiceReceipt">
+      <soap12:operation soapAction="http://tempuri.org/Billing/w_invoicereceipt/CreateInvoiceReceipt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentExists">
+      <soap12:operation soapAction="http://tempuri.org/Billing/w_invoicereceipt/DocumentExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsAlive">
+      <soap12:operation soapAction="http://tempuri.org/Billing/w_invoicereceipt/IsAlive" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="w_invoicereceiptHttpGet" type="tns:w_invoicereceiptHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="SEND">
+      <http:operation location="/SEND" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CREATE">
+      <http:operation location="/CREATE" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CREATE_CONVERT">
+      <http:operation location="/CREATE_CONVERT" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CREATE101">
+      <http:operation location="/CREATE101" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CREATE102">
+      <http:operation location="/CREATE102" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateWithPaymentMethods">
+      <http:operation location="/CreateWithPaymentMethods" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateWithPaymentMethods2">
+      <http:operation location="/CreateWithPaymentMethods2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateWithPaymentMethods3">
+      <http:operation location="/CreateWithPaymentMethods3" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePayPal">
+      <http:operation location="/CreatePayPal" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentExists">
+      <http:operation location="/DocumentExists" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsAlive">
+      <http:operation location="/IsAlive" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="w_invoicereceiptHttpPost" type="tns:w_invoicereceiptHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="SEND">
+      <http:operation location="/SEND" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CREATE">
+      <http:operation location="/CREATE" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CREATE_CONVERT">
+      <http:operation location="/CREATE_CONVERT" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CREATE101">
+      <http:operation location="/CREATE101" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CREATE102">
+      <http:operation location="/CREATE102" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateWithPaymentMethods">
+      <http:operation location="/CreateWithPaymentMethods" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateWithPaymentMethods2">
+      <http:operation location="/CreateWithPaymentMethods2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateWithPaymentMethods3">
+      <http:operation location="/CreateWithPaymentMethods3" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePayPal">
+      <http:operation location="/CreatePayPal" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentExists">
+      <http:operation location="/DocumentExists" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsAlive">
+      <http:operation location="/IsAlive" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="w_invoicereceipt">
+    <wsdl:port name="w_invoicereceiptSoap" binding="tns:w_invoicereceiptSoap">
+      <soap:address location="https://account.invoice4u.co.il/Public/w_invoicereceipt.asmx" />
+    </wsdl:port>
+    <wsdl:port name="w_invoicereceiptSoap12" binding="tns:w_invoicereceiptSoap12">
+      <soap12:address location="https://account.invoice4u.co.il/Public/w_invoicereceipt.asmx" />
+    </wsdl:port>
+    <wsdl:port name="w_invoicereceiptHttpGet" binding="tns:w_invoicereceiptHttpGet">
+      <http:address location="https://account.invoice4u.co.il/Public/w_invoicereceipt.asmx" />
+    </wsdl:port>
+    <wsdl:port name="w_invoicereceiptHttpPost" binding="tns:w_invoicereceiptHttpPost">
+      <http:address location="https://account.invoice4u.co.il/Public/w_invoicereceipt.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

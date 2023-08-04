@@ -1,0 +1,972 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/Billing/w_company" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/Billing/w_company" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/Billing/w_company">
+      <s:element name="INSERT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyState" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyZipcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyTel1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyTel2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyCell" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyFax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyWebsite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyComments" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyTaxId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="INSERTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="INSERTResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="INSERT1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyState" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyZipcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyTel1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyTel2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyCell" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyFax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyWebsite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyComments" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyTaxId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyExternalNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="INSERT1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="INSERT1Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UPDATE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyState" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyZipcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyTel1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyTel2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyCell" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyFax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyWebsite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyComments" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyTaxId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UPDATEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UPDATEResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UPDATE1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyState" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyZipcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyTel1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyTel2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyCell" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyFax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyWebsite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyComments" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyTaxId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyExternalNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UPDATE1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UPDATE1Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETCUSTOMERDOCUMENTS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETCUSTOMERDOCUMENTSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GETCUSTOMERDOCUMENTSResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RETRIEVE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RETRIEVEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RETRIEVEResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETLIST">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyCodeStart" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyCodeEnd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETLISTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GETLISTResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSetResult" type="tns:ArrayOfClientDto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfClientDto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ClientDto" nillable="true" type="tns:ClientDto" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ClientDto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExternalNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Active" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="PaymentTerms" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telephone1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mobile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfClientDto" nillable="true" type="tns:ArrayOfClientDto" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="INSERTSoapIn">
+    <wsdl:part name="parameters" element="tns:INSERT" />
+  </wsdl:message>
+  <wsdl:message name="INSERTSoapOut">
+    <wsdl:part name="parameters" element="tns:INSERTResponse" />
+  </wsdl:message>
+  <wsdl:message name="INSERT1SoapIn">
+    <wsdl:part name="parameters" element="tns:INSERT1" />
+  </wsdl:message>
+  <wsdl:message name="INSERT1SoapOut">
+    <wsdl:part name="parameters" element="tns:INSERT1Response" />
+  </wsdl:message>
+  <wsdl:message name="UPDATESoapIn">
+    <wsdl:part name="parameters" element="tns:UPDATE" />
+  </wsdl:message>
+  <wsdl:message name="UPDATESoapOut">
+    <wsdl:part name="parameters" element="tns:UPDATEResponse" />
+  </wsdl:message>
+  <wsdl:message name="UPDATE1SoapIn">
+    <wsdl:part name="parameters" element="tns:UPDATE1" />
+  </wsdl:message>
+  <wsdl:message name="UPDATE1SoapOut">
+    <wsdl:part name="parameters" element="tns:UPDATE1Response" />
+  </wsdl:message>
+  <wsdl:message name="GETCUSTOMERDOCUMENTSSoapIn">
+    <wsdl:part name="parameters" element="tns:GETCUSTOMERDOCUMENTS" />
+  </wsdl:message>
+  <wsdl:message name="GETCUSTOMERDOCUMENTSSoapOut">
+    <wsdl:part name="parameters" element="tns:GETCUSTOMERDOCUMENTSResponse" />
+  </wsdl:message>
+  <wsdl:message name="RETRIEVESoapIn">
+    <wsdl:part name="parameters" element="tns:RETRIEVE" />
+  </wsdl:message>
+  <wsdl:message name="RETRIEVESoapOut">
+    <wsdl:part name="parameters" element="tns:RETRIEVEResponse" />
+  </wsdl:message>
+  <wsdl:message name="GETLISTSoapIn">
+    <wsdl:part name="parameters" element="tns:GETLIST" />
+  </wsdl:message>
+  <wsdl:message name="GETLISTSoapOut">
+    <wsdl:part name="parameters" element="tns:GETLISTResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSetSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSet" />
+  </wsdl:message>
+  <wsdl:message name="GetSetSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="INSERTHttpGetIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="CompanyCode" type="s:string" />
+    <wsdl:part name="CompanyName" type="s:string" />
+    <wsdl:part name="CompanyAddress" type="s:string" />
+    <wsdl:part name="CompanyCity" type="s:string" />
+    <wsdl:part name="CompanyState" type="s:string" />
+    <wsdl:part name="CompanyZipcode" type="s:string" />
+    <wsdl:part name="CompanyTel1" type="s:string" />
+    <wsdl:part name="CompanyTel2" type="s:string" />
+    <wsdl:part name="CompanyCell" type="s:string" />
+    <wsdl:part name="CompanyFax" type="s:string" />
+    <wsdl:part name="CompanyEmail" type="s:string" />
+    <wsdl:part name="CompanyWebsite" type="s:string" />
+    <wsdl:part name="CompanyComments" type="s:string" />
+    <wsdl:part name="CompanyTaxId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="INSERTHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="INSERT1HttpGetIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="CompanyCode" type="s:string" />
+    <wsdl:part name="CompanyName" type="s:string" />
+    <wsdl:part name="CompanyAddress" type="s:string" />
+    <wsdl:part name="CompanyCity" type="s:string" />
+    <wsdl:part name="CompanyState" type="s:string" />
+    <wsdl:part name="CompanyZipcode" type="s:string" />
+    <wsdl:part name="CompanyTel1" type="s:string" />
+    <wsdl:part name="CompanyTel2" type="s:string" />
+    <wsdl:part name="CompanyCell" type="s:string" />
+    <wsdl:part name="CompanyFax" type="s:string" />
+    <wsdl:part name="CompanyEmail" type="s:string" />
+    <wsdl:part name="CompanyWebsite" type="s:string" />
+    <wsdl:part name="CompanyComments" type="s:string" />
+    <wsdl:part name="CompanyTaxId" type="s:string" />
+    <wsdl:part name="CompanyExternalNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="INSERT1HttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="UPDATEHttpGetIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="CompanyCode" type="s:string" />
+    <wsdl:part name="CompanyName" type="s:string" />
+    <wsdl:part name="CompanyAddress" type="s:string" />
+    <wsdl:part name="CompanyCity" type="s:string" />
+    <wsdl:part name="CompanyState" type="s:string" />
+    <wsdl:part name="CompanyZipcode" type="s:string" />
+    <wsdl:part name="CompanyTel1" type="s:string" />
+    <wsdl:part name="CompanyTel2" type="s:string" />
+    <wsdl:part name="CompanyCell" type="s:string" />
+    <wsdl:part name="CompanyFax" type="s:string" />
+    <wsdl:part name="CompanyEmail" type="s:string" />
+    <wsdl:part name="CompanyWebsite" type="s:string" />
+    <wsdl:part name="CompanyComments" type="s:string" />
+    <wsdl:part name="CompanyTaxId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UPDATEHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="UPDATE1HttpGetIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="CompanyCode" type="s:string" />
+    <wsdl:part name="CompanyName" type="s:string" />
+    <wsdl:part name="CompanyAddress" type="s:string" />
+    <wsdl:part name="CompanyCity" type="s:string" />
+    <wsdl:part name="CompanyState" type="s:string" />
+    <wsdl:part name="CompanyZipcode" type="s:string" />
+    <wsdl:part name="CompanyTel1" type="s:string" />
+    <wsdl:part name="CompanyTel2" type="s:string" />
+    <wsdl:part name="CompanyCell" type="s:string" />
+    <wsdl:part name="CompanyFax" type="s:string" />
+    <wsdl:part name="CompanyEmail" type="s:string" />
+    <wsdl:part name="CompanyWebsite" type="s:string" />
+    <wsdl:part name="CompanyComments" type="s:string" />
+    <wsdl:part name="CompanyTaxId" type="s:string" />
+    <wsdl:part name="CompanyExternalNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UPDATE1HttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GETCUSTOMERDOCUMENTSHttpGetIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="CompanyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GETCUSTOMERDOCUMENTSHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="RETRIEVEHttpGetIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="CompanyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RETRIEVEHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GETLISTHttpGetIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="CompanyCodeStart" type="s:string" />
+    <wsdl:part name="CompanyCodeEnd" type="s:string" />
+    <wsdl:part name="CompanyName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GETLISTHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetSetHttpGetIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSetHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfClientDto" />
+  </wsdl:message>
+  <wsdl:message name="INSERTHttpPostIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="CompanyCode" type="s:string" />
+    <wsdl:part name="CompanyName" type="s:string" />
+    <wsdl:part name="CompanyAddress" type="s:string" />
+    <wsdl:part name="CompanyCity" type="s:string" />
+    <wsdl:part name="CompanyState" type="s:string" />
+    <wsdl:part name="CompanyZipcode" type="s:string" />
+    <wsdl:part name="CompanyTel1" type="s:string" />
+    <wsdl:part name="CompanyTel2" type="s:string" />
+    <wsdl:part name="CompanyCell" type="s:string" />
+    <wsdl:part name="CompanyFax" type="s:string" />
+    <wsdl:part name="CompanyEmail" type="s:string" />
+    <wsdl:part name="CompanyWebsite" type="s:string" />
+    <wsdl:part name="CompanyComments" type="s:string" />
+    <wsdl:part name="CompanyTaxId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="INSERTHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="INSERT1HttpPostIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="CompanyCode" type="s:string" />
+    <wsdl:part name="CompanyName" type="s:string" />
+    <wsdl:part name="CompanyAddress" type="s:string" />
+    <wsdl:part name="CompanyCity" type="s:string" />
+    <wsdl:part name="CompanyState" type="s:string" />
+    <wsdl:part name="CompanyZipcode" type="s:string" />
+    <wsdl:part name="CompanyTel1" type="s:string" />
+    <wsdl:part name="CompanyTel2" type="s:string" />
+    <wsdl:part name="CompanyCell" type="s:string" />
+    <wsdl:part name="CompanyFax" type="s:string" />
+    <wsdl:part name="CompanyEmail" type="s:string" />
+    <wsdl:part name="CompanyWebsite" type="s:string" />
+    <wsdl:part name="CompanyComments" type="s:string" />
+    <wsdl:part name="CompanyTaxId" type="s:string" />
+    <wsdl:part name="CompanyExternalNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="INSERT1HttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="UPDATEHttpPostIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="CompanyCode" type="s:string" />
+    <wsdl:part name="CompanyName" type="s:string" />
+    <wsdl:part name="CompanyAddress" type="s:string" />
+    <wsdl:part name="CompanyCity" type="s:string" />
+    <wsdl:part name="CompanyState" type="s:string" />
+    <wsdl:part name="CompanyZipcode" type="s:string" />
+    <wsdl:part name="CompanyTel1" type="s:string" />
+    <wsdl:part name="CompanyTel2" type="s:string" />
+    <wsdl:part name="CompanyCell" type="s:string" />
+    <wsdl:part name="CompanyFax" type="s:string" />
+    <wsdl:part name="CompanyEmail" type="s:string" />
+    <wsdl:part name="CompanyWebsite" type="s:string" />
+    <wsdl:part name="CompanyComments" type="s:string" />
+    <wsdl:part name="CompanyTaxId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UPDATEHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="UPDATE1HttpPostIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="CompanyCode" type="s:string" />
+    <wsdl:part name="CompanyName" type="s:string" />
+    <wsdl:part name="CompanyAddress" type="s:string" />
+    <wsdl:part name="CompanyCity" type="s:string" />
+    <wsdl:part name="CompanyState" type="s:string" />
+    <wsdl:part name="CompanyZipcode" type="s:string" />
+    <wsdl:part name="CompanyTel1" type="s:string" />
+    <wsdl:part name="CompanyTel2" type="s:string" />
+    <wsdl:part name="CompanyCell" type="s:string" />
+    <wsdl:part name="CompanyFax" type="s:string" />
+    <wsdl:part name="CompanyEmail" type="s:string" />
+    <wsdl:part name="CompanyWebsite" type="s:string" />
+    <wsdl:part name="CompanyComments" type="s:string" />
+    <wsdl:part name="CompanyTaxId" type="s:string" />
+    <wsdl:part name="CompanyExternalNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UPDATE1HttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GETCUSTOMERDOCUMENTSHttpPostIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="CompanyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GETCUSTOMERDOCUMENTSHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="RETRIEVEHttpPostIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="CompanyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RETRIEVEHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GETLISTHttpPostIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+    <wsdl:part name="CompanyCodeStart" type="s:string" />
+    <wsdl:part name="CompanyCodeEnd" type="s:string" />
+    <wsdl:part name="CompanyName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GETLISTHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetSetHttpPostIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Key" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSetHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfClientDto" />
+  </wsdl:message>
+  <wsdl:portType name="w_companySoap">
+    <wsdl:operation name="INSERT">
+      <wsdl:input message="tns:INSERTSoapIn" />
+      <wsdl:output message="tns:INSERTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="INSERT1">
+      <wsdl:input message="tns:INSERT1SoapIn" />
+      <wsdl:output message="tns:INSERT1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE">
+      <wsdl:input message="tns:UPDATESoapIn" />
+      <wsdl:output message="tns:UPDATESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE1">
+      <wsdl:input message="tns:UPDATE1SoapIn" />
+      <wsdl:output message="tns:UPDATE1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GETCUSTOMERDOCUMENTS">
+      <wsdl:input message="tns:GETCUSTOMERDOCUMENTSSoapIn" />
+      <wsdl:output message="tns:GETCUSTOMERDOCUMENTSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RETRIEVE">
+      <wsdl:input message="tns:RETRIEVESoapIn" />
+      <wsdl:output message="tns:RETRIEVESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GETLIST">
+      <wsdl:input message="tns:GETLISTSoapIn" />
+      <wsdl:output message="tns:GETLISTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSet">
+      <wsdl:input message="tns:GetSetSoapIn" />
+      <wsdl:output message="tns:GetSetSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="w_companyHttpGet">
+    <wsdl:operation name="INSERT">
+      <wsdl:input message="tns:INSERTHttpGetIn" />
+      <wsdl:output message="tns:INSERTHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="INSERT1">
+      <wsdl:input message="tns:INSERT1HttpGetIn" />
+      <wsdl:output message="tns:INSERT1HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE">
+      <wsdl:input message="tns:UPDATEHttpGetIn" />
+      <wsdl:output message="tns:UPDATEHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE1">
+      <wsdl:input message="tns:UPDATE1HttpGetIn" />
+      <wsdl:output message="tns:UPDATE1HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GETCUSTOMERDOCUMENTS">
+      <wsdl:input message="tns:GETCUSTOMERDOCUMENTSHttpGetIn" />
+      <wsdl:output message="tns:GETCUSTOMERDOCUMENTSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RETRIEVE">
+      <wsdl:input message="tns:RETRIEVEHttpGetIn" />
+      <wsdl:output message="tns:RETRIEVEHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GETLIST">
+      <wsdl:input message="tns:GETLISTHttpGetIn" />
+      <wsdl:output message="tns:GETLISTHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSet">
+      <wsdl:input message="tns:GetSetHttpGetIn" />
+      <wsdl:output message="tns:GetSetHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="w_companyHttpPost">
+    <wsdl:operation name="INSERT">
+      <wsdl:input message="tns:INSERTHttpPostIn" />
+      <wsdl:output message="tns:INSERTHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="INSERT1">
+      <wsdl:input message="tns:INSERT1HttpPostIn" />
+      <wsdl:output message="tns:INSERT1HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE">
+      <wsdl:input message="tns:UPDATEHttpPostIn" />
+      <wsdl:output message="tns:UPDATEHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE1">
+      <wsdl:input message="tns:UPDATE1HttpPostIn" />
+      <wsdl:output message="tns:UPDATE1HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GETCUSTOMERDOCUMENTS">
+      <wsdl:input message="tns:GETCUSTOMERDOCUMENTSHttpPostIn" />
+      <wsdl:output message="tns:GETCUSTOMERDOCUMENTSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RETRIEVE">
+      <wsdl:input message="tns:RETRIEVEHttpPostIn" />
+      <wsdl:output message="tns:RETRIEVEHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GETLIST">
+      <wsdl:input message="tns:GETLISTHttpPostIn" />
+      <wsdl:output message="tns:GETLISTHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSet">
+      <wsdl:input message="tns:GetSetHttpPostIn" />
+      <wsdl:output message="tns:GetSetHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="w_companySoap" type="tns:w_companySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="INSERT">
+      <soap:operation soapAction="http://tempuri.org/Billing/w_company/INSERT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="INSERT1">
+      <soap:operation soapAction="http://tempuri.org/Billing/w_company/INSERT1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE">
+      <soap:operation soapAction="http://tempuri.org/Billing/w_company/UPDATE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE1">
+      <soap:operation soapAction="http://tempuri.org/Billing/w_company/UPDATE1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GETCUSTOMERDOCUMENTS">
+      <soap:operation soapAction="http://tempuri.org/Billing/w_company/GETCUSTOMERDOCUMENTS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RETRIEVE">
+      <soap:operation soapAction="http://tempuri.org/Billing/w_company/RETRIEVE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GETLIST">
+      <soap:operation soapAction="http://tempuri.org/Billing/w_company/GETLIST" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSet">
+      <soap:operation soapAction="http://tempuri.org/Billing/w_company/GetSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="w_companySoap12" type="tns:w_companySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="INSERT">
+      <soap12:operation soapAction="http://tempuri.org/Billing/w_company/INSERT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="INSERT1">
+      <soap12:operation soapAction="http://tempuri.org/Billing/w_company/INSERT1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE">
+      <soap12:operation soapAction="http://tempuri.org/Billing/w_company/UPDATE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE1">
+      <soap12:operation soapAction="http://tempuri.org/Billing/w_company/UPDATE1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GETCUSTOMERDOCUMENTS">
+      <soap12:operation soapAction="http://tempuri.org/Billing/w_company/GETCUSTOMERDOCUMENTS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RETRIEVE">
+      <soap12:operation soapAction="http://tempuri.org/Billing/w_company/RETRIEVE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GETLIST">
+      <soap12:operation soapAction="http://tempuri.org/Billing/w_company/GETLIST" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSet">
+      <soap12:operation soapAction="http://tempuri.org/Billing/w_company/GetSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="w_companyHttpGet" type="tns:w_companyHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="INSERT">
+      <http:operation location="/INSERT" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="INSERT1">
+      <http:operation location="/INSERT1" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE">
+      <http:operation location="/UPDATE" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE1">
+      <http:operation location="/UPDATE1" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GETCUSTOMERDOCUMENTS">
+      <http:operation location="/GETCUSTOMERDOCUMENTS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RETRIEVE">
+      <http:operation location="/RETRIEVE" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GETLIST">
+      <http:operation location="/GETLIST" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSet">
+      <http:operation location="/GetSet" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="w_companyHttpPost" type="tns:w_companyHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="INSERT">
+      <http:operation location="/INSERT" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="INSERT1">
+      <http:operation location="/INSERT1" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE">
+      <http:operation location="/UPDATE" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE1">
+      <http:operation location="/UPDATE1" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GETCUSTOMERDOCUMENTS">
+      <http:operation location="/GETCUSTOMERDOCUMENTS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RETRIEVE">
+      <http:operation location="/RETRIEVE" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GETLIST">
+      <http:operation location="/GETLIST" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSet">
+      <http:operation location="/GetSet" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="w_company">
+    <wsdl:port name="w_companySoap" binding="tns:w_companySoap">
+      <soap:address location="https://account.invoice4u.co.il/Public/w_company.asmx" />
+    </wsdl:port>
+    <wsdl:port name="w_companySoap12" binding="tns:w_companySoap12">
+      <soap12:address location="https://account.invoice4u.co.il/Public/w_company.asmx" />
+    </wsdl:port>
+    <wsdl:port name="w_companyHttpGet" binding="tns:w_companyHttpGet">
+      <http:address location="https://account.invoice4u.co.il/Public/w_company.asmx" />
+    </wsdl:port>
+    <wsdl:port name="w_companyHttpPost" binding="tns:w_companyHttpPost">
+      <http:address location="https://account.invoice4u.co.il/Public/w_company.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

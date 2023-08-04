@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Ofek.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Ofek_Invoice4U_InvoiceReceipt_w_invoicereceipt" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://account.invoice4u.co.il/Public/w_invoicereceipt.asmx</Value>
+    </Setting>
+    <Setting Name="Ofek_Invoice4U_Invoice_w_invoice" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://account.invoice4u.co.il/Public/w_invoice.asmx</Value>
+    </Setting>
+    <Setting Name="Ofek_Invoice4U_Receipt_w_receipt" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://account.invoice4u.co.il/Public/w_receipt.asmx</Value>
+    </Setting>
+    <Setting Name="Ofek_Invoice4U_Company_w_company" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://account.invoice4u.co.il/Public/w_company.asmx</Value>
+    </Setting>
+    <Setting Name="Ofek_ZCreditWS_clsZCreditWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://www.zcredit.co.il/ZCreditWS.asmx</Value>
+    </Setting>
+    <Setting Name="Ofek_Invoice4U_InvoiceDeal_w_invoicedeal" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://account.invoice4u.co.il/Public/w_invoicedeal.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

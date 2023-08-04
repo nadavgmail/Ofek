@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="https://account.invoice4u.co.il/Public/w_invoicereceipt.asmx?disco" filename="w_invoicereceipt.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="https://account.invoice4u.co.il/Public/w_invoicereceipt.asmx?wsdl" filename="w_invoicereceipt.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

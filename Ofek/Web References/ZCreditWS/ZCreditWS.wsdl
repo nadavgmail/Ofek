@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://z-credit.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://z-credit.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://z-credit.com/">
+      <s:element name="CommitFullTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TerminalNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Track2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExpDate_MMYY" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TransactionSum" type="s:float" />
+            <s:element minOccurs="1" maxOccurs="1" name="NumOfPayments" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FirstPaymentSum" type="s:float" />
+            <s:element minOccurs="1" maxOccurs="1" name="OtherPaymentsSum" type="s:float" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsRefund" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="CurrencyType" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CreditType" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="J" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsPointsTransaction" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="PointsSum" type="s:float" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HolderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CVV" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsCustomerPresent" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExtraData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CreditClubID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthNum" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CommitFullTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CommitFullTransactionResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExpDate_MMYY" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthNum" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Validation_Result_Code" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Validation_Result_Message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardIssuerCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardFinancerCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardBrandCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ReferenceNumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="VoucherNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ApprovalType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CommitFullTransactionWIntOt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TerminalNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Track2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExpDate_MMYY" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TransactionSum" type="s:float" />
+            <s:element minOccurs="1" maxOccurs="1" name="NumOfPayments" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FirstPaymentSum" type="s:float" />
+            <s:element minOccurs="1" maxOccurs="1" name="OtherPaymentsSum" type="s:float" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsRefund" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="CurrencyType" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CreditType" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="J" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsPointsTransaction" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="PointsSum" type="s:float" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HolderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CVV" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsCustomerPresent" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExtraData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CreditClubID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthNum" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CommitFullTransactionWIntOtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CommitFullTransactionWIntOtResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExpDate_MMYY" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthNum" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Validation_Result_Code" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Validation_Result_Message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardIssuerCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardFinancerCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardBrandCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ReferenceNumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="VoucherNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ApprovalType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Int_Ot" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CommitSimpleTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TerminalNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Track2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExpDate_MMYY" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TransactionSum" type="s:float" />
+            <s:element minOccurs="0" maxOccurs="1" name="HolderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CVV" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsCustomerPresent" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthNum" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CommitSimpleTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CommitSimpleTransactionResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExpDate_MMYY" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthNum" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Validation_Result_Code" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Validation_Result_Message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardIssuerCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardFinancerCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardBrandCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ReferenceNumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="VoucherNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ApprovalType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CommitSimplePaymentsTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TerminalNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Track2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExpDate_MMYY" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TransactionSum" type="s:float" />
+            <s:element minOccurs="1" maxOccurs="1" name="NumOfPayments" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FirstPaymentSum" type="s:float" />
+            <s:element minOccurs="1" maxOccurs="1" name="OtherPaymentsSum" type="s:float" />
+            <s:element minOccurs="0" maxOccurs="1" name="HolderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CVV" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsCustomerPresent" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthNum" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CommitSimplePaymentsTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CommitSimplePaymentsTransactionResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExpDate_MMYY" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthNum" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Validation_Result_Code" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Validation_Result_Message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardIssuerCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardFinancerCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardBrandCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ReferenceNumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="VoucherNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ApprovalType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateCard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TerminalNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Track2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExpDate_MMYY" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateCardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidateCardResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExpDate_MMYY" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Validation_Result_Code" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Validation_Result_Message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApplyPostTransactionData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TerminalNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ReferenceNumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="SignatureData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LocationData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ImageData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AudioSampleData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApplyPostTransactionDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ApplyPostTransactionDataResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="Validation_Result_Code" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Validation_Result_Message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmailPostTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TerminalNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ReferenceNumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="SendEmailToMerchant" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="SendEmailToCustomer" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmailPostTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendEmailPostTransactionResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="Validation_Result_Code" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Validation_Result_Message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReportData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TransactionsSource" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TerminalNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardNumber_Last4Digits" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="From_TransactionDate_DDmmYYHHMMSS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_TransactionDate_DDmmYYHHMMSS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="From_TransactionSum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_TransactionSum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HolderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShvaAuthNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InternalReferenceNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardIssuerCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardFinancerCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumberOfPayments" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="RefundsOnly" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReportDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetReportDataResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="Validation_Result_Code" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Validation_Result_Message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="XmlDataResponse" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomReportData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ReportNumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TerminalNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="From_TransactionDate_DDmmYYHHMMSS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="To_TransactionDate_DDmmYYHHMMSS" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomReportDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetCustomReportDataResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="Validation_Result_Code" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Validation_Result_Message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="XmlDataResponse" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTerminalSettings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TerminalNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTerminalSettingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetTerminalSettingsResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="TerminalName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TerminalVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TerminalBusinessNumbers" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Validation_Result_Code" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Validation_Result_Message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EchoTest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TerminalNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EchoTestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EchoTestResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="Validation_Result_Code" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Validation_Result_Message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CommitFullTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:CommitFullTransaction" />
+  </wsdl:message>
+  <wsdl:message name="CommitFullTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:CommitFullTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommitFullTransactionWIntOtSoapIn">
+    <wsdl:part name="parameters" element="tns:CommitFullTransactionWIntOt" />
+  </wsdl:message>
+  <wsdl:message name="CommitFullTransactionWIntOtSoapOut">
+    <wsdl:part name="parameters" element="tns:CommitFullTransactionWIntOtResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommitSimpleTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:CommitSimpleTransaction" />
+  </wsdl:message>
+  <wsdl:message name="CommitSimpleTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:CommitSimpleTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommitSimplePaymentsTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:CommitSimplePaymentsTransaction" />
+  </wsdl:message>
+  <wsdl:message name="CommitSimplePaymentsTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:CommitSimplePaymentsTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateCardSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateCard" />
+  </wsdl:message>
+  <wsdl:message name="ValidateCardSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApplyPostTransactionDataSoapIn">
+    <wsdl:part name="parameters" element="tns:ApplyPostTransactionData" />
+  </wsdl:message>
+  <wsdl:message name="ApplyPostTransactionDataSoapOut">
+    <wsdl:part name="parameters" element="tns:ApplyPostTransactionDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailPostTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmailPostTransaction" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailPostTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmailPostTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReportDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReportData" />
+  </wsdl:message>
+  <wsdl:message name="GetReportDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReportDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomReportDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomReportData" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomReportDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomReportDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTerminalSettingsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTerminalSettings" />
+  </wsdl:message>
+  <wsdl:message name="GetTerminalSettingsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTerminalSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="EchoTestSoapIn">
+    <wsdl:part name="parameters" element="tns:EchoTest" />
+  </wsdl:message>
+  <wsdl:message name="EchoTestSoapOut">
+    <wsdl:part name="parameters" element="tns:EchoTestResponse" />
+  </wsdl:message>
+  <wsdl:portType name="clsZCreditWSSoap">
+    <wsdl:operation name="CommitFullTransaction">
+      <wsdl:input message="tns:CommitFullTransactionSoapIn" />
+      <wsdl:output message="tns:CommitFullTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CommitFullTransactionWIntOt">
+      <wsdl:input message="tns:CommitFullTransactionWIntOtSoapIn" />
+      <wsdl:output message="tns:CommitFullTransactionWIntOtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CommitSimpleTransaction">
+      <wsdl:input message="tns:CommitSimpleTransactionSoapIn" />
+      <wsdl:output message="tns:CommitSimpleTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CommitSimplePaymentsTransaction">
+      <wsdl:input message="tns:CommitSimplePaymentsTransactionSoapIn" />
+      <wsdl:output message="tns:CommitSimplePaymentsTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateCard">
+      <wsdl:input message="tns:ValidateCardSoapIn" />
+      <wsdl:output message="tns:ValidateCardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ApplyPostTransactionData">
+      <wsdl:input message="tns:ApplyPostTransactionDataSoapIn" />
+      <wsdl:output message="tns:ApplyPostTransactionDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailPostTransaction">
+      <wsdl:input message="tns:SendEmailPostTransactionSoapIn" />
+      <wsdl:output message="tns:SendEmailPostTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReportData">
+      <wsdl:input message="tns:GetReportDataSoapIn" />
+      <wsdl:output message="tns:GetReportDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomReportData">
+      <wsdl:input message="tns:GetCustomReportDataSoapIn" />
+      <wsdl:output message="tns:GetCustomReportDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminalSettings">
+      <wsdl:input message="tns:GetTerminalSettingsSoapIn" />
+      <wsdl:output message="tns:GetTerminalSettingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EchoTest">
+      <wsdl:input message="tns:EchoTestSoapIn" />
+      <wsdl:output message="tns:EchoTestSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="clsZCreditWSSoap" type="tns:clsZCreditWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CommitFullTransaction">
+      <soap:operation soapAction="http://z-credit.com/CommitFullTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommitFullTransactionWIntOt">
+      <soap:operation soapAction="http://z-credit.com/CommitFullTransactionWIntOt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommitSimpleTransaction">
+      <soap:operation soapAction="http://z-credit.com/CommitSimpleTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommitSimplePaymentsTransaction">
+      <soap:operation soapAction="http://z-credit.com/CommitSimplePaymentsTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateCard">
+      <soap:operation soapAction="http://z-credit.com/ValidateCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplyPostTransactionData">
+      <soap:operation soapAction="http://z-credit.com/ApplyPostTransactionData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailPostTransaction">
+      <soap:operation soapAction="http://z-credit.com/SendEmailPostTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportData">
+      <soap:operation soapAction="http://z-credit.com/GetReportData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomReportData">
+      <soap:operation soapAction="http://z-credit.com/GetCustomReportData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminalSettings">
+      <soap:operation soapAction="http://z-credit.com/GetTerminalSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EchoTest">
+      <soap:operation soapAction="http://z-credit.com/EchoTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="clsZCreditWSSoap12" type="tns:clsZCreditWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CommitFullTransaction">
+      <soap12:operation soapAction="http://z-credit.com/CommitFullTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommitFullTransactionWIntOt">
+      <soap12:operation soapAction="http://z-credit.com/CommitFullTransactionWIntOt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommitSimpleTransaction">
+      <soap12:operation soapAction="http://z-credit.com/CommitSimpleTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommitSimplePaymentsTransaction">
+      <soap12:operation soapAction="http://z-credit.com/CommitSimplePaymentsTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateCard">
+      <soap12:operation soapAction="http://z-credit.com/ValidateCard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplyPostTransactionData">
+      <soap12:operation soapAction="http://z-credit.com/ApplyPostTransactionData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmailPostTransaction">
+      <soap12:operation soapAction="http://z-credit.com/SendEmailPostTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportData">
+      <soap12:operation soapAction="http://z-credit.com/GetReportData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomReportData">
+      <soap12:operation soapAction="http://z-credit.com/GetCustomReportData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTerminalSettings">
+      <soap12:operation soapAction="http://z-credit.com/GetTerminalSettings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EchoTest">
+      <soap12:operation soapAction="http://z-credit.com/EchoTest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="clsZCreditWS">
+    <wsdl:port name="clsZCreditWSSoap" binding="tns:clsZCreditWSSoap">
+      <soap:address location="https://www.zcredit.co.il/ZCreditWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="clsZCreditWSSoap12" binding="tns:clsZCreditWSSoap12">
+      <soap12:address location="https://www.zcredit.co.il/ZCreditWS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

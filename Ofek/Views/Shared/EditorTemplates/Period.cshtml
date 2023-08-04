@@ -1,0 +1,18 @@
+﻿@model Ofek.Models.Period
+
+<table style="padding:0px;margin:0px" isperiodcontrol="true">
+    <tr>
+        <td style="padding:0px;margin:0px" isperiodtypetd="true">
+            @Html.DropDownListFor((model => model.AgeType), Ofek.PeriodBL.GetPeriodTypeSelect(true), new { controlorigvalue=Model.AgeType, isperiodtypeselect="true" })
+        </td>
+        <td style="padding:0px;margin:0px;display:none" isperiodagetd="true">
+            @Html.TextBoxFor((model => model.Age))
+        </td>
+        <td style="padding:0px;margin:0px;display:none" isperiodyeartd="true">
+            @Html.TextBoxFor((model => model.Year))
+        </td>
+        <td style="padding:0px;margin:0px;display:none" isperioddatetd="true">
+            @Html.EditorFor((model => model.Date))
+        </td>
+    </tr>
+</table>

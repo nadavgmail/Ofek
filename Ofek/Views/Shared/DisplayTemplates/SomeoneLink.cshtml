@@ -1,0 +1,15 @@
+﻿@model Ofek.Models.SomeoneLink
+
+
+@{
+    string strDisplayName = "";
+    string strTemp1 = "";
+    string strTemp2 = "";
+
+    Ofek.SomeoneLinkBL.GetSomeoneDetails(Model,out strTemp1, out strDisplayName,out strTemp2);
+}
+
+@strDisplayName
+
+
+

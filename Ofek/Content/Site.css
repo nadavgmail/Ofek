@@ -1,0 +1,22 @@
+﻿body {
+    text-align: center;
+    margin: 0 auto;
+    direction:ltr
+}
+select, label, input[type=text], input[type=number], button, submit, input[type=submit], input[type=button] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    width: 300px
+}
+
+form{
+    width:80%;
+    margin: 0 auto;
+}
+table {
+    margin: 0 auto;
+}
+
+
+

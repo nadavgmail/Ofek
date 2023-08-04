@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Invoice.Common" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Invoice.Common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://private.invoice4u.co.il/Services/CustomerService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="Customer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AccountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Capital" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="Cell" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContactFirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContactLastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExtNumber" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="ExtendedIdnentifer1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExtendedIdnentifer2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExtendedIdnentifer3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExtendedIdnentifer4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Fax" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FreeBalance" type="xs:double" />
+          <xs:element minOccurs="0" name="FreeUniqueID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FreeZip" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FrenchBusinessType" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Guid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HasBeenExported" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="IsAutomaicInvoices" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrgID" type="xs:int" />
+          <xs:element minOccurs="0" name="PayTerms" type="xs:int" />
+          <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Retainer" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RetainerAmount" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="RetainerTitle" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Ucan2ClientID" type="xs:int" />
+          <xs:element minOccurs="0" name="UniqueID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Website" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Customer" nillable="true" type="tns:Customer" />
+  <xs:complexType name="CommonObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ArrayOfCommonError" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CommonObject" nillable="true" type="tns:CommonObject" />
+  <xs:complexType name="ArrayOfCommonError">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CommonError" nillable="true" type="tns:CommonError" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCommonError" nillable="true" type="tns:ArrayOfCommonError" />
+  <xs:complexType name="CommonError">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Paramters" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CommonError" nillable="true" type="tns:CommonError" />
+  <xs:complexType name="PrintOpetions">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonObject">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="AllowedPaymentMethods" nillable="true" type="q1:ArrayOfint" />
+          <xs:element minOccurs="0" name="BankDetails" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CodeCullom" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DiscountTypeCullom" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DocumentTemplate" type="xs:int" />
+          <xs:element minOccurs="0" name="Drawing" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EarlyPaymentDiscount" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="HasFixedLatePaymentPenalty" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HtmlText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemDiscountCullom" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LatePaymentTax" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="LegalNote1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LegalNote2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LegalNote3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LegalNote4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RoundAmount" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TemplateColor" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PrintOpetions" nillable="true" type="tns:PrintOpetions" />
+  <xs:complexType name="DocumentCsv">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Amount" type="xs:double" />
+          <xs:element minOccurs="0" name="AuthNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CVV" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChargeType" type="xs:int" />
+          <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreditNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Currency" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DocumentCreated" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DocumentItems" nillable="true" type="tns:ArrayOfDocumentItem" />
+          <xs:element minOccurs="0" name="ExerciseSecurityCertificate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExpiryDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FirstPayment" type="xs:double" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="IdNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsGeneralClient" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MailTo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumOfPayments" type="xs:int" />
+          <xs:element minOccurs="0" name="OtherPayments" type="xs:double" />
+          <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SuccessFullClearing" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TaxRate" type="xs:double" />
+          <xs:element minOccurs="0" name="UserID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DocumentCsv" nillable="true" type="tns:DocumentCsv" />
+  <xs:complexType name="ArrayOfDocumentItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentItem" nillable="true" type="tns:DocumentItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocumentItem" nillable="true" type="tns:ArrayOfDocumentItem" />
+  <xs:complexType name="DocumentItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Avrage" type="xs:double" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConversionRate" type="xs:double" />
+          <xs:element minOccurs="0" name="Currency" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Discount" nillable="true" type="tns:Discount" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Price" type="xs:double" />
+          <xs:element minOccurs="0" name="Quantity" type="xs:double" />
+          <xs:element minOccurs="0" name="TaxPercentage" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="Total" type="xs:double" />
+          <xs:element minOccurs="0" name="TotalTax" type="xs:double" />
+          <xs:element minOccurs="0" name="TotalWithoutTax" type="xs:double" />
+          <xs:element minOccurs="0" name="UserCatalogID" type="xs:int" />
+          <xs:element minOccurs="0" name="UserCategoryID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DocumentItem" nillable="true" type="tns:DocumentItem" />
+  <xs:complexType name="Discount">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeforeTax" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsNominal" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Value" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Discount" nillable="true" type="tns:Discount" />
+  <xs:complexType name="ClientCsv">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BussinesNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Cell" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExtrnalNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Fax" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Payments" type="xs:int" />
+          <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Street" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ClientCsv" nillable="true" type="tns:ClientCsv" />
+  <xs:complexType name="PaymentDetailes">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AccountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AccountOwner" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BIC" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BranchName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClientId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PaymentDetailes" nillable="true" type="tns:PaymentDetailes" />
+  <xs:complexType name="ArrayOfCustomer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Customer" nillable="true" type="tns:Customer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomer" nillable="true" type="tns:ArrayOfCustomer" />
+  <xs:complexType name="CommonCollectionOfArrayOfCustomerJHiVxprS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="CommonCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Invoice.Common" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfCustomer" Namespace="http://schemas.datacontract.org/2004/07/Invoice.Common" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommonObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Response" nillable="true" type="tns:ArrayOfCustomer" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CommonCollectionOfArrayOfCustomerJHiVxprS" nillable="true" type="tns:CommonCollectionOfArrayOfCustomerJHiVxprS" />
+</xs:schema>

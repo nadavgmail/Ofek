@@ -1,0 +1,20 @@
+﻿@using Ofek;
+@using Ofek.Models
+@model List<CustomersAndProducts>
+
+@{
+    ViewBag.Title = "Test";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    @Html.DropDownList("ProductID", Ofek.Helpers.Getproducts())
+    @Html.DropDownList("CustomerID", Ofek.Helpers.GetCustomers())
+    <input type="button" value="get Users" id="btnUsers" />
+    <input type="button" value="get Products" id="btnProducts" />
+    <div id="MainContent">
+
+    </div>
+
+</div>
+

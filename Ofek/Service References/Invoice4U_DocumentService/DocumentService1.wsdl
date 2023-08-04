@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="Invoice" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="Invoice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="Invoice/Imports">
+      <xsd:import schemaLocation="http://private.invoice4u.co.il/Services/DocumentService.svc?xsd=xsd0" namespace="Invoice" />
+      <xsd:import schemaLocation="http://private.invoice4u.co.il/Services/DocumentService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://private.invoice4u.co.il/Services/DocumentService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Invoice.Common" />
+      <xsd:import schemaLocation="http://private.invoice4u.co.il/Services/DocumentService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Invoice.Common.Enums" />
+      <xsd:import schemaLocation="http://private.invoice4u.co.il/Services/DocumentService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="DocumentService_InsertImportedDoc_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertImportedDoc" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_InsertImportedDoc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertImportedDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_IsAllreadyImportedDoc_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsAllreadyImportedDoc" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_IsAllreadyImportedDoc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsAllreadyImportedDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_CreateDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDocument" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_CreateDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_GetDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocument" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_GetDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_GetDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocuments" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_GetDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_Autocomplete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Autocomplete" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_Autocomplete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AutocompleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_AutocompleteMobile_InputMessage">
+    <wsdl:part name="parameters" element="tns:AutocompleteMobile" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_AutocompleteMobile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AutocompleteMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_InitDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:InitDocument" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_InitDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InitDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_InitDocumentMobile_InputMessage">
+    <wsdl:part name="parameters" element="tns:InitDocumentMobile" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_InitDocumentMobile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InitDocumentMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_GetDocumentItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentItems" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_GetDocumentItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_GetPayments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPayments" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_GetPayments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_CreateRetainer_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRetainer" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_CreateRetainer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRetainerResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_SendDocumentsByFax_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendDocumentsByFax" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_SendDocumentsByFax_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendDocumentsByFaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_GetIncomeReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIncomeReport" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_GetIncomeReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIncomeReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_UpdateDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocuments" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_UpdateDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_GetAutoInvoicePayments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoInvoicePayments" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_GetAutoInvoicePayments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoInvoicePaymentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_CreateAutoInvoice_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAutoInvoice" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_CreateAutoInvoice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAutoInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_UpdatePaymentsIssued_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePaymentsIssued" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_UpdatePaymentsIssued_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePaymentsIssuedResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_GetCatalogItemByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatalogItemByCode" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_GetCatalogItemByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatalogItemByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_GetCatalogItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatalogItems" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_GetCatalogItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatalogItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_UpdateCatalogItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCatalogItems" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_UpdateCatalogItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCatalogItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_DeleteCatalogItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCatalogItems" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_DeleteCatalogItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCatalogItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_GetRefferedDocsTotalSum_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefferedDocsTotalSum" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_GetRefferedDocsTotalSum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefferedDocsTotalSumResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_ChangeDocumentStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeDocumentStatus" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_ChangeDocumentStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeDocumentStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_CreateDocumentFR_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDocumentFR" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_CreateDocumentFR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDocumentFRResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_GetAutoInvoicePayments_Automatically_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoInvoicePayments_Automatically" />
+  </wsdl:message>
+  <wsdl:message name="DocumentService_GetAutoInvoicePayments_Automatically_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoInvoicePayments_AutomaticallyResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DocumentService">
+    <wsdl:operation name="InsertImportedDoc">
+      <wsdl:input wsaw:Action="Invoice/DocumentService/InsertImportedDoc" message="tns:DocumentService_InsertImportedDoc_InputMessage" />
+      <wsdl:output wsaw:Action="Invoice/DocumentService/InsertImportedDocResponse" message="tns:DocumentService_InsertImportedDoc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsAllreadyImportedDoc">
+      <wsdl:input wsaw:Action="Invoice/DocumentService/IsAllreadyImportedDoc" message="tns:DocumentService_IsAllreadyImportedDoc_InputMessage" />
+      <wsdl:output wsaw:Action="Invoice/DocumentService/IsAllreadyImportedDocResponse" message="tns:DocumentService_IsAllreadyImportedDoc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateDocument">
+      <wsdl:input wsaw:Action="Invoice/DocumentService/CreateDocument" message="tns:DocumentService_CreateDocument_InputMessage" />
+      <wsdl:output wsaw:Action="Invoice/DocumentService/CreateDocumentResponse" message="tns:DocumentService_CreateDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocument">
+      <wsdl:input wsaw:Action="Invoice/DocumentService/GetDocument" message="tns:DocumentService_GetDocument_InputMessage" />
+      <wsdl:output wsaw:Action="Invoice/DocumentService/GetDocumentResponse" message="tns:DocumentService_GetDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocuments">
+      <wsdl:input wsaw:Action="Invoice/DocumentService/GetDocuments" message="tns:DocumentService_GetDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="Invoice/DocumentService/GetDocumentsResponse" message="tns:DocumentService_GetDocuments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Autocomplete">
+      <wsdl:input wsaw:Action="Invoice/DocumentService/Autocomplete" message="tns:DocumentService_Autocomplete_InputMessage" />
+      <wsdl:output wsaw:Action="Invoice/DocumentService/AutocompleteResponse" message="tns:DocumentService_Autocomplete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AutocompleteMobile">
+      <wsdl:input wsaw:Action="Invoice/DocumentService/AutocompleteMobile" message="tns:DocumentService_AutocompleteMobile_InputMessage" />
+      <wsdl:output wsaw:Action="Invoice/DocumentService/AutocompleteMobileResponse" message="tns:DocumentService_AutocompleteMobile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InitDocument">
+      <wsdl:input wsaw:Action="Invoice/DocumentService/InitDocument" message="tns:DocumentService_InitDocument_InputMessage" />
+      <wsdl:output wsaw:Action="Invoice/DocumentService/InitDocumentResponse" message="tns:DocumentService_InitDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InitDocumentMobile">
+      <wsdl:input wsaw:Action="Invoice/DocumentService/InitDocumentMobile" message="tns:DocumentService_InitDocumentMobile_InputMessage" />
+      <wsdl:output wsaw:Action="Invoice/DocumentService/InitDocumentMobileResponse" message="tns:DocumentService_InitDocumentMobile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentItems">
+      <wsdl:input wsaw:Action="Invoice/DocumentService/GetDocumentItems" message="tns:DocumentService_GetDocumentItems_InputMessage" />
+      <wsdl:output wsaw:Action="Invoice/DocumentService/GetDocumentItemsResponse" message="tns:DocumentService_GetDocumentItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPayments">
+      <wsdl:input wsaw:Action="Invoice/DocumentService/GetPayments" message="tns:DocumentService_GetPayments_InputMessage" />
+      <wsdl:output wsaw:Action="Invoice/DocumentService/GetPaymentsResponse" message="tns:DocumentService_GetPayments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateRetainer">
+      <wsdl:input wsaw:Action="Invoice/DocumentService/CreateRetainer" message="tns:DocumentService_CreateRetainer_InputMessage" />
+      <wsdl:output wsaw:Action="Invoice/DocumentService/CreateRetainerResponse" message="tns:DocumentService_CreateRetainer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendDocumentsByFax">
+      <wsdl:input wsaw:Action="Invoice/DocumentService/SendDocumentsByFax" message="tns:DocumentService_SendDocumentsByFax_InputMessage" />
+      <wsdl:output wsaw:Action="Invoice/DocumentService/SendDocumentsByFaxResponse" message="tns:DocumentService_SendDocumentsByFax_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIncomeReport">
+      <wsdl:input wsaw:Action="Invoice/DocumentService/GetIncomeReport" message="tns:DocumentService_GetIncomeReport_InputMessage" />
+      <wsdl:output wsaw:Action="Invoice/DocumentService/GetIncomeReportResponse" message="tns:DocumentService_GetIncomeReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocuments">
+      <wsdl:input wsaw:Action="Invoice/DocumentService/UpdateDocuments" message="tns:DocumentService_UpdateDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="Invoice/DocumentService/UpdateDocumentsResponse" message="tns:DocumentService_UpdateDocuments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoInvoicePayments">
+      <wsdl:input wsaw:Action="Invoice/DocumentService/GetAutoInvoicePayments" message="tns:DocumentService_GetAutoInvoicePayments_InputMessage" />
+      <wsdl:output wsaw:Action="Invoice/DocumentService/GetAutoInvoicePaymentsResponse" message="tns:DocumentService_GetAutoInvoicePayments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAutoInvoice">
+      <wsdl:input wsaw:Action="Invoice/DocumentService/CreateAutoInvoice" message="tns:DocumentService_CreateAutoInvoice_InputMessage" />
+      <wsdl:output wsaw:Action="Invoice/DocumentService/CreateAutoInvoiceResponse" message="tns:DocumentService_CreateAutoInvoice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePaymentsIssued">
+      <wsdl:input wsaw:Action="Invoice/DocumentService/UpdatePaymentsIssued" message="tns:DocumentService_UpdatePaymentsIssued_InputMessage" />
+      <wsdl:output wsaw:Action="Invoice/DocumentService/UpdatePaymentsIssuedResponse" message="tns:DocumentService_UpdatePaymentsIssued_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogItemByCode">
+      <wsdl:input wsaw:Action="Invoice/DocumentService/GetCatalogItemByCode" message="tns:DocumentService_GetCatalogItemByCode_InputMessage" />
+      <wsdl:output wsaw:Action="Invoice/DocumentService/GetCatalogItemByCodeResponse" message="tns:DocumentService_GetCatalogItemByCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogItems">
+      <wsdl:input wsaw:Action="Invoice/DocumentService/GetCatalogItems" message="tns:DocumentService_GetCatalogItems_InputMessage" />
+      <wsdl:output wsaw:Action="Invoice/DocumentService/GetCatalogItemsResponse" message="tns:DocumentService_GetCatalogItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCatalogItems">
+      <wsdl:input wsaw:Action="Invoice/DocumentService/UpdateCatalogItems" message="tns:DocumentService_UpdateCatalogItems_InputMessage" />
+      <wsdl:output wsaw:Action="Invoice/DocumentService/UpdateCatalogItemsResponse" message="tns:DocumentService_UpdateCatalogItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCatalogItems">
+      <wsdl:input wsaw:Action="Invoice/DocumentService/DeleteCatalogItems" message="tns:DocumentService_DeleteCatalogItems_InputMessage" />
+      <wsdl:output wsaw:Action="Invoice/DocumentService/DeleteCatalogItemsResponse" message="tns:DocumentService_DeleteCatalogItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRefferedDocsTotalSum">
+      <wsdl:input wsaw:Action="Invoice/DocumentService/GetRefferedDocsTotalSum" message="tns:DocumentService_GetRefferedDocsTotalSum_InputMessage" />
+      <wsdl:output wsaw:Action="Invoice/DocumentService/GetRefferedDocsTotalSumResponse" message="tns:DocumentService_GetRefferedDocsTotalSum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeDocumentStatus">
+      <wsdl:input wsaw:Action="Invoice/DocumentService/ChangeDocumentStatus" message="tns:DocumentService_ChangeDocumentStatus_InputMessage" />
+      <wsdl:output wsaw:Action="Invoice/DocumentService/ChangeDocumentStatusResponse" message="tns:DocumentService_ChangeDocumentStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateDocumentFR">
+      <wsdl:input wsaw:Action="Invoice/DocumentService/CreateDocumentFR" message="tns:DocumentService_CreateDocumentFR_InputMessage" />
+      <wsdl:output wsaw:Action="Invoice/DocumentService/CreateDocumentFRResponse" message="tns:DocumentService_CreateDocumentFR_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoInvoicePayments_Automatically">
+      <wsdl:input wsaw:Action="Invoice/DocumentService/GetAutoInvoicePayments_Automatically" message="tns:DocumentService_GetAutoInvoicePayments_Automatically_InputMessage" />
+      <wsdl:output wsaw:Action="Invoice/DocumentService/GetAutoInvoicePayments_AutomaticallyResponse" message="tns:DocumentService_GetAutoInvoicePayments_Automatically_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

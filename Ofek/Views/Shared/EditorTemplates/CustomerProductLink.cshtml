@@ -1,0 +1,84 @@
+﻿@model Ofek.Models.CustomerProductLink
+
+<div customerproductlinkcontainer="true">
+    @Html.HiddenFor(model => model.CustomerProductLinkID)
+
+    <span>
+    @Html.DropDownListFor((model => model.ProductType), (SelectList)Ofek.CustomerProductLinkBL.GetProductTypesSelect(true), new { customerproductlinktype = "true", initialvalue = Model != null ? ((int)Model.ProductType).ToString() : "", customerid = ViewBag.strCustomerID }) 
+    </span>
+    <span style="display:none" customerproductlinkentitytype="@((int)Ofek.CustomerProductLinkBL.ProductTypes.Gemel)" initialvalue="@(Model!=null ? Model.CustomerGemelID : "" )" >
+    @Html.DropDownListFor((model=> model.CustomerGemelID),new SelectList(new List<dynamic>()))
+    </span>
+
+    <span style="display:none" customerproductlinkentitytype="@((int)Ofek.CustomerProductLinkBL.ProductTypes.BituachPolisa)" initialvalue="@(Model != null ? Model.CustomerBituachPolisaID : "")" >
+    @Html.DropDownListFor((model=> model.CustomerBituachPolisaID),new SelectList(new List<dynamic>()))
+    </span>
+
+    <span style="display:none" customerproductlinkentitytype="@((int)Ofek.CustomerProductLinkBL.ProductTypes.Nadlan)" initialvalue="@(Model != null ? Model.CustomerNadlanID : "")" >
+    @Html.DropDownListFor((model=> model.CustomerNadlanID),new SelectList(new List<dynamic>()))
+    </span>
+
+    <span style="display:none" customerproductlinkentitytype="@((int)Ofek.CustomerProductLinkBL.ProductTypes.Stock)" initialvalue="@(Model != null ? Model.CustomerStockID : "")" >
+    @Html.DropDownListFor((model=> model.CustomerStockID),new SelectList(new List<dynamic>()))
+    </span>
+
+    <span style="display:none" customerproductlinkentitytype="@((int)Ofek.CustomerProductLinkBL.ProductTypes.CompanyHold)" initialvalue="@(Model != null ? Model.CustomerCompanyHoldID : "")" >
+    @Html.DropDownListFor((model => model.CustomerCompanyHoldID), new SelectList(new List<dynamic>()))
+    </span>
+
+    <span style="display:none" customerproductlinkentitytype="@((int)Ofek.CustomerProductLinkBL.ProductTypes.CreditCard)" initialvalue="@(Model != null ? Model.CustomerCreditCardID : "")" >
+    @Html.DropDownListFor((model => model.CustomerCreditCardID), new SelectList(new List<dynamic>()))
+    </span>
+
+    <span style="display:none" customerproductlinkentitytype="@((int)Ofek.CustomerProductLinkBL.ProductTypes.Debt)" initialvalue="@(Model != null ? Model.CustomerDebtID : "")" >
+    @Html.DropDownListFor((model => model.CustomerDebtID), new SelectList(new List<dynamic>()))
+    </span>
+
+    <span style="display:none" customerproductlinkentitytype="@((int)Ofek.CustomerProductLinkBL.ProductTypes.Employer)" initialvalue="@(Model != null ? Model.CustomerEmployerID : "")" >
+    @Html.DropDownListFor((model => model.CustomerEmployerID), new SelectList(new List<dynamic>()))
+    </span>
+
+    <span style="display:none" customerproductlinkentitytype="@((int)Ofek.CustomerProductLinkBL.ProductTypes.FinanceInvest)" initialvalue="@(Model != null ? Model.CustomerFinanceInvestID : "")" >
+    @Html.DropDownListFor((model => model.CustomerFinanceInvestID), new SelectList(new List<dynamic>()))
+    </span>
+
+    <span style="display:none" customerproductlinkentitytype="@((int)Ofek.CustomerProductLinkBL.ProductTypes.IncludePizuyGemel)" initialvalue="@(Model != null ? Model.CustomerIncludePizuyGemelID : "")" >
+    @Html.DropDownListFor((model => model.CustomerIncludePizuyGemelID), new SelectList(new List<dynamic>()))
+    </span>
+
+    <span style="display:none" customerproductlinkentitytype="@((int)Ofek.CustomerProductLinkBL.ProductTypes.Income)" initialvalue="@(Model != null ? Model.CustomerIncomeID : "")" >
+    @Html.DropDownListFor((model => model.CustomerIncomeID), new SelectList(new List<dynamic>()))
+    </span>
+
+    <span style="display:none" customerproductlinkentitytype="@((int)Ofek.CustomerProductLinkBL.ProductTypes.Inherit)" initialvalue="@(Model != null ? Model.CustomerInheritID : "")" >
+    @Html.DropDownListFor((model => model.CustomerInheritID), new SelectList(new List<dynamic>()))
+    </span>
+
+    <span style="display:none" customerproductlinkentitytype="@((int)Ofek.CustomerProductLinkBL.ProductTypes.Kizva)" initialvalue="@(Model != null ? Model.CustomerKizvaID : "")" >
+    @Html.DropDownListFor((model => model.CustomerKizvaID), new SelectList(new List<dynamic>()))
+    </span>
+
+    <span style="display:none" customerproductlinkentitytype="@((int)Ofek.CustomerProductLinkBL.ProductTypes.MoneySaving)" initialvalue="@(Model != null ? Model.CustomerMoneySavingID : "")" >
+    @Html.DropDownListFor((model => model.CustomerMoneySavingID), new SelectList(new List<dynamic>()))
+    </span>
+
+    <span style="display:none" customerproductlinkentitytype="@((int)Ofek.CustomerProductLinkBL.ProductTypes.Pensya)" initialvalue="@(Model != null ? Model.CustomerPensyaID : "")" >
+    @Html.DropDownListFor((model => model.CustomerPensyaID), new SelectList(new List<dynamic>()))
+    </span>
+
+    <span style="display:none" customerproductlinkentitytype="@((int)Ofek.CustomerProductLinkBL.ProductTypes.Polisa)" initialvalue="@(Model != null ? Model.CustomerPolisaID : "")" >
+    @Html.DropDownListFor((model => model.CustomerPolisaID), new SelectList(new List<dynamic>()))
+    </span>
+
+    <span style="display:none" customerproductlinkentitytype="@((int)Ofek.CustomerProductLinkBL.ProductTypes.BankAccount)" initialvalue="@(Model != null ? Model.CustomerBankAccountID : "")" >
+    @Html.DropDownListFor((model => model.CustomerBankAccountID), new SelectList(new List<dynamic>()))
+    </span>
+
+    <span style="display:none" customerproductlinkentitytype="@((int)Ofek.CustomerProductLinkBL.ProductTypes.PolisaTzvira)" initialvalue="@(Model != null ? Model.CustomerPolisaTzviraID : "")" >
+    @Html.DropDownListFor((model => model.CustomerPolisaTzviraID), new SelectList(new List<dynamic>()))
+    </span>
+
+    <span style="display:none" customerproductlinkentitytype="@((int)Ofek.CustomerProductLinkBL.ProductTypes.BituachPolisaKisuy)" initialvalue="@(Model != null ? Model.CustomerBituachPolisaKisuyID : "")" >
+    @Html.DropDownListFor((model => model.CustomerBituachPolisaKisuyID), new SelectList(new List<dynamic>()))
+    </span>
+</div>

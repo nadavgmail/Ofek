@@ -1,0 +1,17 @@
+﻿@model Ofek.Models.SomeoneLink
+
+<div someonecontainer="true">
+    @Html.HiddenFor(model => model.SomeoneLinkID)
+
+    <span>
+    @Html.DropDownListFor((model => model.SomeoneType), (SelectList)Ofek.SomeoneLinkBL.GetSomeoneTypeSelect(true), new { someonetype = "true", initialvalue=Model!=null? ((int)Model.SomeoneType).ToString() : "" }) 
+    </span>
+    <span style="display:none" someoneentitytype="@((int)Ofek.SomeoneLinkBL.SomeoneTypes.User)" initialvalue="@(Model!=null ? Model.UserID : "" )" >
+    @Html.DropDownListFor((model=> model.UserID),new SelectList(new List<dynamic>()))
+    </span>
+
+    <span style="display:none" someoneentitytype="@((int)Ofek.SomeoneLinkBL.SomeoneTypes.Customer)" initialvalue="@(Model!= null ? Model.CustomerID : "")">
+    @Html.DropDownListFor((model => model.CustomerID), new SelectList(new List<dynamic>()))
+    </span>
+
+</div>

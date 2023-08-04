@@ -1,0 +1,9 @@
+﻿@model Ofek.Models.CustomerProductLink
+
+@{
+    string strCustomerProductDisplayName = "";
+    Ofek.CustomerProductLinkBL.GetProductLinkDetails(Model, out strCustomerProductDisplayName);
+}
+
+@strCustomerProductDisplayName
+

@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="Invoice" elementFormDefault="qualified" targetNamespace="Invoice" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://private.invoice4u.co.il/Services/DocumentService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Invoice.Common" />
+  <xs:import schemaLocation="http://private.invoice4u.co.il/Services/DocumentService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Invoice.Common.Enums" />
+  <xs:import schemaLocation="http://private.invoice4u.co.il/Services/DocumentService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="InsertImportedDoc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserId" type="xs:int" />
+        <xs:element minOccurs="0" name="DocType" type="xs:int" />
+        <xs:element minOccurs="0" name="OldDocNumber" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertImportedDocResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="InsertImportedDocResult" nillable="true" type="q1:Document" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsAllreadyImportedDoc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserId" type="xs:int" />
+        <xs:element minOccurs="0" name="DocType" type="xs:int" />
+        <xs:element minOccurs="0" name="OldDocNumber" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsAllreadyImportedDocResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="IsAllreadyImportedDocResult" nillable="true" type="q2:Document" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="doc" nillable="true" type="q3:Document" />
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="CreateDocumentResult" nillable="true" type="q4:Document" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="docId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="GetDocumentResult" nillable="true" type="q5:Document" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocuments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="dr" nillable="true" type="q6:DocumentsRequest" />
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="GetDocumentsResult" nillable="true" type="q7:CommonCollectionOfArrayOfDocumentJHiVxprS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Autocomplete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="q" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="limit" type="xs:int" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Invoice.Common.Enums" minOccurs="0" name="type" type="q8:DocumentType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AutocompleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="AutocompleteResult" nillable="true" type="q9:ArrayOfDocument" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AutocompleteMobile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="q" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="limit" type="xs:int" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Invoice.Common.Enums" minOccurs="0" name="type" type="q10:DocumentType" />
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AutocompleteMobileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="AutocompleteMobileResult" nillable="true" type="q11:ArrayOfDocument" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InitDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="docType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InitDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="InitDocumentResult" nillable="true" type="q12:Document" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InitDocumentMobile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="docType" type="xs:int" />
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InitDocumentMobileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="InitDocumentMobileResult" nillable="true" type="q13:Document" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="dr" nillable="true" type="q14:DocumentsRequest" />
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="GetDocumentItemsResult" nillable="true" type="q15:CommonCollectionOfArrayOfDocumentItemJHiVxprS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPayments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="data" nillable="true" type="q16:DocumentsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="GetPaymentsResult" nillable="true" type="q17:CommonCollectionOfArrayOfPaymentJHiVxprS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateRetainer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="customers" nillable="true" type="q18:ArrayOfCustomer" />
+        <xs:element minOccurs="0" name="year" type="xs:int" />
+        <xs:element minOccurs="0" name="month" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateRetainerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="CreateRetainerResult" nillable="true" type="q19:CommonCollectionOfArrayOfCustomerJHiVxprS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendDocumentsByFax">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="docs" nillable="true" type="q20:ArrayOfFaxRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendDocumentsByFaxResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="SendDocumentsByFaxResult" nillable="true" type="q21:CommonObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIncomeReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="dr" nillable="true" type="q22:DocumentsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIncomeReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="GetIncomeReportResult" nillable="true" type="q23:CommonCollectionOfArrayOfGraphItemJHiVxprS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDocuments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="docs" nillable="true" type="q24:ArrayOfDocument" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDocumentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="UpdateDocumentsResult" nillable="true" type="q25:CommonObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutoInvoicePayments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="req" nillable="true" type="q26:AutoInvoicePaymentsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutoInvoicePaymentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="GetAutoInvoicePaymentsResult" nillable="true" type="q27:CommonCollectionOfArrayOfAutoInvoicePaymentJHiVxprS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAutoInvoice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="paymentInfo" nillable="true" type="q28:ArrayOfAutoInvoicePayment" />
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAutoInvoiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="CreateAutoInvoiceResult" nillable="true" type="q29:CommonObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePaymentsIssued">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="payments" nillable="true" type="q30:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePaymentsIssuedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="UpdatePaymentsIssuedResult" nillable="true" type="q31:CommonObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogItemByCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogItemByCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="GetCatalogItemByCodeResult" nillable="true" type="q32:CatalogItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAll" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="GetCatalogItemsResult" nillable="true" type="q33:CommonCollectionOfArrayOfCatalogItemJHiVxprS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCatalogItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="catalogItems" nillable="true" type="q34:ArrayOfCatalogItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCatalogItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="UpdateCatalogItemsResult" nillable="true" type="q35:CommonObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCatalogItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ItemsIds" nillable="true" type="q36:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCatalogItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="DeleteCatalogItemsResult" nillable="true" type="q37:CommonObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRefferedDocsTotalSum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="dr" nillable="true" type="q38:DocumentsRequest" />
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRefferedDocsTotalSumResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRefferedDocsTotalSumResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeDocumentStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="docs" nillable="true" type="q39:ArrayOfDocument" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeDocumentStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="ChangeDocumentStatusResult" nillable="true" type="q40:CommonObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateDocumentFR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="doc" nillable="true" type="q41:Document" />
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateDocumentFRResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="CreateDocumentFRResult" nillable="true" type="q42:Document" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutoInvoicePayments_Automatically">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutoInvoicePayments_AutomaticallyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Invoice.Common" minOccurs="0" name="GetAutoInvoicePayments_AutomaticallyResult" nillable="true" type="q43:ArrayOfAutoInvoicePayment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
