@@ -25,7 +25,7 @@ namespace Ofek
 
         public static string GetDateString(DateTime ? date)
         {
-            return date == null ? "" : ((DateTime)(date)).ToString("");
+            return date == null ? "" : ((DateTime)(date)).ToString("dd/MM/yyyy");
         }
 
         //public static List<SelectListItem> GetMovieList(int? id)
