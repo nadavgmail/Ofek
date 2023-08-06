@@ -28,21 +28,6 @@ namespace Ofek
             return date == null ? "" : ((DateTime)(date)).ToString("dd/MM/yyyy");
         }
 
-        //public static List<SelectListItem> GetMovieList(int? id)
-        //{
-        //    TheaterDb db = new TheaterDb();
-        //    List<SelectListItem> MoviesCategory = new List<SelectListItem>();
-        //    //var categories = db.Categories.ToList();
-        //    //foreach (var item in categories)
-        //    //{
-        //    //    MoviesCategory.Add(new SelectListItem() { Text = item.Description, Value = item.CategoryId.ToString(), Selected = (id !=null && item.CategoryId == id) });
-        //    //}
-        //    //return MoviesCategory;
-        //    return db.Categories.Select(c => new SelectListItem() { Text = c.Description, Value = c.CategoryId.ToString(), Selected = (id != null && c.CategoryId == id) }).ToList<SelectListItem>();
-        //}
-
-
-
         public static List<CustomersAndProducts> GetCustomersAndProducts()
         {
             OfekDBContext objDB = new OfekDBContext();

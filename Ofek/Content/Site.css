@@ -1,7 +1,9 @@
 ﻿body {
     text-align: center;
     margin: 0 auto;
-    direction:ltr
+    direction:ltr;
+    font-size:20px;
+    
 }
 select, label, input[type=text], input[type=number], button, submit, input[type=submit], input[type=button] {
     padding: 12px 20px;
@@ -16,6 +18,10 @@ form{
 }
 table {
     margin: 0 auto;
+}
+
+.ui-menu-item {
+    text-align: right !important
 }
 
 

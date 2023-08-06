@@ -10,25 +10,37 @@
     <div style="text-align:center">no data</div>
     return;
 }
+
+<div>@Model.First().FullName</div>
 <table>
     <tr>
+       
         <th>שם חברה</th>
         <th>שם מוצר</th>
         <th>סוג</th>
         <th>תאריך התחלה</th>
+        <th>סטטוס</th>
         <th>סבום</th>
     </tr>
     @foreach (var item in Model)
     {
         <tr>
+            
             <td>@item.FinanceInstitue</td>
             <td>@item.ProductType</td>
             <td>@item.InvestType</td>
             <td>@Helpers.GetDateString(item.ProdCreatedDate)</td>
+            <td>@item.status</td>
             <td>@item.sum</td>
+
         </tr>
     }
     
 </table>
 <div>total amount:@Model.Sum(s=>s.sum)</div>
+
+<div>add product:</div>
+
+
+
 

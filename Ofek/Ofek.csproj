@@ -502,12 +502,7 @@
     <Content Include="Views\Shared\EditorTemplates\int.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\CustomerProducts\Create.cshtml" />
-    <Content Include="Views\CustomerProducts\Delete.cshtml" />
-    <Content Include="Views\CustomerProducts\Details.cshtml" />
-    <Content Include="Views\CustomerProducts\Edit.cshtml" />
-    <Content Include="Views\CustomerProducts\Index.cshtml" />
     <Content Include="Views\Home\Test.cshtml" />
-    <Content Include="Views\Home\getUsers.cshtml" />
     <Content Include="Views\Home\getPruducts.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -1,8 +1,8 @@
 ﻿@model Ofek.CustomerProduct
 
 @{
-    ViewBag.Title = "Create";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+   
+    Layout = null;
 }
 
 <h2>Create</h2>
@@ -12,26 +12,14 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>CustomerProduct</h4>
+        
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @*@Html.LabelFor(model => model.CustomerProductID, htmlAttributes: new { @class = "control-label col-md-2" })*@
             <div class="col-md-10">
-                @*@Html.EditorFor(model => model.CustomerProductID, new { htmlAttributes = new { @class = "form-control" } })*@
-                @*@Html.ValidationMessageFor(model => model.CustomerProductID, "", new { @class = "text-danger" })*@
                 @Html.DropDownList("CustomerID",Ofek.Helpers.GetCustomers())
             </div>
         </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.CustomerID, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.CustomerID, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CustomerID, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
         <div class="form-group">
             @Html.LabelFor(model => model.AccountNumber, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -41,10 +29,7 @@
         </div>
 
         <div class="form-group">
-            @*@Html.LabelFor(model => model.ProductID, htmlAttributes: new { @class = "control-label col-md-2" })*@
             <div class="col-md-10">
-                @*@Html.EditorFor(model => model.ProductID, new { htmlAttributes = new { @class = "form-control" } })*@
-                @*@Html.ValidationMessageFor(model => model.ProductID, "", new { @class = "text-danger" })*@
                 @Html.DropDownList("ProductID", Ofek.Helpers.Getproducts())
             </div>
         </div>
@@ -76,12 +61,10 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="button" value="Create" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+

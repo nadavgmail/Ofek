@@ -28,26 +28,21 @@ function postAjax(url, dataOject) {
     });
 } 
 
-//btnUsers
+
 
 $(function () {
-    $("#btnUsers").on("click",async function () {
-        const url = "/home/getUsers";
-        const productId = $("#ProductID").val();
-        const data = await postAjax(url, { id: productId });
-        $("#MainContent").html(data);
-
-
-    });
-});
-
-$(function () {
-    $("#btnProducts").on("click", async function () {
+    $(".productInfo").on("click", async function () {
         const url = "/home/getPruducts";
-        const customerId = $("#CustomerID").val();
+        const customerId = $(this).attr("id");
+       // alert(customerId);
+
         const data = await postAjax(url, { id: customerId });
         $("#MainContent").html(data);
 
 
     });
+
+  
+
+
 });

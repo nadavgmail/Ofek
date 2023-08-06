@@ -1,6 +1,6 @@
 ﻿@using Ofek;
 @using Ofek.Models
-@model List<CustomersAndProducts>
+@model List<Customer>
 
 @{
     ViewBag.Title = "Test";
@@ -8,13 +8,36 @@
 }
 
 <div>
-    @Html.DropDownList("ProductID", Ofek.Helpers.Getproducts())
-    @Html.DropDownList("CustomerID", Ofek.Helpers.GetCustomers())
-    <input type="button" value="get Users" id="btnUsers" />
-    <input type="button" value="get Products" id="btnProducts" />
+    @*@Html.DropDownList("ProductID", Ofek.Helpers.Getproducts())
+        @Html.DropDownList("CustomerID", Ofek.Helpers.GetCustomers())*@
+
+    @if (Model.Count == 0)
+    {
+        <div style="text-align:center">no data</div>
+        return;
+    }
+    <table>
+        <tr>
+            <th>שם</th>
+            <th>כתובת</th>
+            <th>תאריך לידה</th>
+            <th>&nbsp;</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@string.Format("{0} {1}", item.FirstName, item.LastName)</td>
+                <td>@string.Format("{0} {1} {2}", item.City, item.Street, item.HouseNumber)</td>
+                <td>@Helpers.GetDateString(item.BirthDate)</td>
+                <td><input class="productInfo" type="button" id="@item.CustomerID" value="get products" /></td>
+            </tr>
+        }
+    </table>
     <div id="MainContent">
 
     </div>
+    @Html.Action("Create", "CustomerProducts")
+    @*@Html.Partial("Create", "CustomerProducts")*@
 
 </div>
 
